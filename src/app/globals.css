@@ -33,6 +33,10 @@ html::-webkit-scrollbar {
 	display: none;
 }
 
+li {
+	list-style : none
+}
+
 
 @tailwind base;
 @tailwind components;

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
+import ProjectDetailModal from "./ProjectDetailModal";
 
 const projectListData = [
   {
@@ -39,11 +40,13 @@ const Projects = () => {
   };
 
   return (
+    <>
+    <ProjectDetailModal/>
     <Layout title={SECTION_TITLE.project}>
       <div className="w-full h-full flex flex-col">
         <ul className="my-10 flex gap-5 font-bold text-2xl">
           {projectListData.map((item, index) => (
-            <li
+            <li key={item.type}
               onClick={onClickProjectType}
               className={
                 projectType === item.type
@@ -58,12 +61,13 @@ const Projects = () => {
         <div className="w-full h-[674px] grid grid-cols-3 grid-rows-2 gap-5">
           {
             TeamProjectData.map((item, index)=>(
-              <ProjectCard {...item}/>
+              <li key={item.title}><ProjectCard {...item}/></li>
             ))
           }
         </div>
       </div>
     </Layout>
+    </>
   );
 };
 
