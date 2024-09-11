@@ -7,7 +7,7 @@ interface LayoutProps {
 
 const Layout = ({ children, title }: LayoutProps) => {
   return (
-    <section id={title} className="w-screen h-screen py-20 px-[15%] snap-start">
+    <section id={title} className="w-screen max-w-[1045px] h-screen py-20 m-auto">
       <div className="w-full h-8 flex items-center">
         <hr className="flex-grow border-solid border-pureWhite mr-5 opacity-70" />
         <h1 className="text-pureWhite text-lg font-bold">{title}</h1>

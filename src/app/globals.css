@@ -1,8 +1,10 @@
-html, body {
+html,
+body {
 	margin: 0;
-	overflow-x : hidden;
+	overflow-x: hidden;
 	font-family: "Pretendard", sans-serif;
-  }
+}
+
 main {
 	scroll-behavior: smooth !important;
 }
@@ -10,18 +12,27 @@ main {
 .fade-in {
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
-  }
-  
-  .fade-in.visible {
+}
+
+.fade-in.visible {
 	opacity: 1;
-  }
+}
 
 
 @font-face {
 	font-family: "Pretendard";
 	src: url("./fonts/PretendardVariable.ttf") format("truetype");
-  }
-  
+}
+
+html {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
 
 @tailwind base;
 @tailwind components;

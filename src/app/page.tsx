@@ -39,7 +39,7 @@ export default function Home() {
 
         setTimeout(() => {
           isScrolling.current = false;
-        }, 1500);
+        }, 2000);
       }
     };
 
@@ -62,8 +62,8 @@ export default function Home() {
     <main ref={mainRef}>
       <OverView />
       <AboutMe />
-      <Skill />
       <Projects />
+      <Skill />
       <Experience />
       <Contact />
     </main>
