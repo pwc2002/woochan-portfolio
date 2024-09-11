@@ -1,4 +1,6 @@
-import React from "react";
+'use client';
+
+import React, { useEffect } from "react";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import HighlightText from "../common/HighlightText";
