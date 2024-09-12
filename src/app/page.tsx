@@ -13,6 +13,7 @@ export default function Home() {
   const isScrolling = useRef<boolean>(false);
   const [currentSection, setCurrentSection] = useState<number>(0);
 
+  /*
   useEffect(() => {
     const mainElement = mainRef.current;
     if (!mainElement) return;
@@ -57,6 +58,7 @@ export default function Home() {
       window.removeEventListener("touchmove", handleTouchMove);
     };
   }, [currentSection]);
+  */
 
   return (
     <main ref={mainRef}>
