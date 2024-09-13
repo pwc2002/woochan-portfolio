@@ -14,6 +14,7 @@ const config: Config = {
         pureWhite : "#FFFFFF",
         white : "#E1E1E1",
         grey : "#8C8C8C",
+        lightgrey : "#F2F2F2",
       },
     },
   },

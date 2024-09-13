@@ -12,13 +12,13 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, badges, description, images }: ProjectCardProps) => {
     return (
         <div className='w-full h-full bg-white flex flex-col gap-2 rounded-lg pb-5 cursor-pointer'>
-            <div className='relative w-full h-[60%]'> {/* 부모 div 추가 */}
+            <div className='relative w-full h-[60%]'>
                 <Image
                     src={images}
                     alt={title}
                     className='object-cover rounded-tl-lg rounded-tr-lg'
-                    layout="fill" // 부모 div에 맞게 채우기
-                    quality={100} // 품질 설정
+                    layout="fill"
+                    quality={100}
                 />
             </div>
             <div className='px-2'>
