@@ -3,7 +3,6 @@ import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
 import ProjectDetailModal from "./ProjectDetailModal";
-import { useHandleWheel } from "@/hooks/useHandleWheel";
 
 const projectListData = [{ type: "팀 프로젝트" }, { type: "개인 프로젝트" }];
 
@@ -49,7 +48,7 @@ const Projects = () => {
 
   return (
     <>
-      {isDetailOpen && <ProjectDetailModal onCloseModal={onCloseModal} />}
+      {isDetailOpen && <ProjectDetailModal onCloseModal={onCloseModal}/>}
       <Layout title={SECTION_TITLE.project}>
         <div className="w-full h-full flex flex-col">
           <ul className="my-10 flex gap-5 font-bold text-2xl">

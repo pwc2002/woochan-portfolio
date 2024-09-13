@@ -94,7 +94,7 @@ interface ListTitleProps {
 const ListSection = ({ title, items }: ListTitleProps) => {
   return (
     <div className="w-full flex flex-col gap-3">
-      <div className="w-full h-11 rounded-lg bg-[#FF8080] px-3 py-2 text-pureWhite font-bold">
+      <div className="w-full h-11 rounded-lg bg-[#FF8080] px-3 py-2 text-pureWhite font-bold flex items-center">
         {title}
       </div>
       {items}
