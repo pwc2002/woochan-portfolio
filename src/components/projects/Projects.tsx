@@ -25,8 +25,12 @@ const TeamProjectData = [
   },
 ];
 
+interface ProjectsProps {
+  handleWheel : (event: WheelEvent) => void
+}
 
-const Projects = () => {
+
+const Projects = ({handleWheel} : ProjectsProps) => {
   const [isDetailOpen, setIsDetailOpen] = useState<boolean>(false);
   const [projectType, setProjectType] = useState<string | null>(
     projectListData[0].type
@@ -48,7 +52,7 @@ const Projects = () => {
 
   return (
     <>
-      {isDetailOpen && <ProjectDetailModal onCloseModal={onCloseModal}/>}
+      {isDetailOpen && <ProjectDetailModal onCloseModal={onCloseModal} handleWheel={handleWheel}/>}
       <Layout title={SECTION_TITLE.project}>
         <div className="w-full h-full flex flex-col">
           <ul className="my-10 flex gap-5 font-bold text-2xl">

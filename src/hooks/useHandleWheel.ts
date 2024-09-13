@@ -1,10 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 
-export const useHandleWheel = () => {
+export const useHandleWheel = (isModalOpen : boolean) => {
   const isScrolling = useRef<boolean>(false);
   const [currentSection, setCurrentSection] = useState<number>(0);
+  const currentSectionRef = useRef(currentSection);
 
-  const handleWheel = (event: WheelEvent) => {
+  useEffect(() => {
+    currentSectionRef.current = currentSection;
+  }, [currentSection]);
+
+  const handleWheel = useCallback((event: WheelEvent) => {
+    if (isModalOpen) {
+      event.preventDefault();
+      return;
+    }
+
     const bodyOverflow = getComputedStyle(document.body).overflow;
 
     if (isScrolling.current || bodyOverflow === "hidden") {
@@ -16,10 +26,10 @@ export const useHandleWheel = () => {
     const sections = document.body.children;
     const newSectionIndex = Math.max(
       0,
-      Math.min(currentSection + direction, sections.length - 1)                             
+      Math.min(currentSectionRef.current + direction, sections.length - 1) // ref 사용
     );
 
-    if (newSectionIndex !== currentSection) {
+    if (newSectionIndex !== currentSectionRef.current) {
       isScrolling.current = true;
       setCurrentSection(newSectionIndex);
 
@@ -32,15 +42,13 @@ export const useHandleWheel = () => {
         isScrolling.current = false;
       }, 2000);
     }
-  };
+  }, []); // 의존성 배열 비워둠
 
-  const handleTouchMove = (event: TouchEvent) => {
+  const handleTouchMove = useCallback((event: TouchEvent) => {
     if (isScrolling.current) {
       event.preventDefault();
     }
-  };
-
-
+  }, []);
 
   return { isScrolling, handleWheel, handleTouchMove, currentSection };
 };
