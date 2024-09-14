@@ -49,14 +49,14 @@ const Experience = () => {
   return (
     <Layout title={SECTION_TITLE.experience}>
       <div className="w-full h-full flex flex-col">
-        <div className="w-full h-11 rounded-lg bg-pureWhite px-3 m-10 font-extrabold flex items-center text-primary text-xl">
+        <div className="w-full h-11 rounded-lg bg-pureWhite px-3 mt-10 font-extrabold flex items-center text-primary text-xl">
           학력 및 교육
         </div>
         <ul className="w-full h-[70%] flex flex-col justify-center ">
           {experienceData.map((experience, index) => (
             <li
               key={index}
-              className="flex-1 flex border-b border-white border-solid"
+              className="flex-1 flex border-b border-white border-solid border-opacity-20"
             >
               <div className="flex-1 flex flex-col justify-center items-center font-extrabold text-white text-xl">
                 <h1 className="text-center">{experience.title}</h1>
