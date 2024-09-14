@@ -16,11 +16,18 @@ const ProjectDetailModal = ({ onCloseModal, handleWheel }: ProjectDetailModalPro
       document.body.addEventListener("wheel", handleWheel, { passive: false });
     };
   }, [handleWheel]);
+
+  const onClickOverlay = (e: React.MouseEvent<HTMLElement>) => {
+    if (e.currentTarget === e.target) {
+      onCloseModal();
+    }
+  }
   
   return (
     <section
+      onClick={onClickOverlay}
       id="ProjectDetail"
-      className="pb-10 absolute w-screen h-screen bg-black bg-opacity-70 z-10 overflow-y-auto">
+      className="pb-10 absolute w-screen h-screen bg-black bg-opacity-70 z-10 overflow-y-auto" >
       <ProjectHeader onCloseModal={onCloseModal} />
       <ProjectDetailDescription />
     </section>

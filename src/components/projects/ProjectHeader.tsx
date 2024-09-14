@@ -1,4 +1,3 @@
-import { Project } from "next/dist/build/swc";
 import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
