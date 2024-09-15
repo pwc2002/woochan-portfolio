@@ -5,7 +5,7 @@ import Layout from '../common/Layout'
 const Contact = () => {
   return (
     <Layout title={SECTION_TITLE.contact}>
-      <div className="w-full h-full flex flex-col my-5">
+      <div className="w-full h-full flex flex-col">
       <h1 className='text-pureWhite text-[40px] font-bold mb-5'>제 소개를 봐주셔서 정말 감사합니다!</h1>
       <h2 className='text-2xl text-white font-medium'>함께 하고 싶은 동료 개발자가 되기 위해, <br/>
       신뢰를 줄 수 있는 개발자가 되기 위해 끊임 없이 도전하겠습니다</h2>

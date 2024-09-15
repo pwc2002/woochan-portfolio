@@ -1,48 +1,27 @@
-import React, { MutableRefObject, useState, useEffect } from "react";
+import React, { useState } from "react";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
 import ProjectDetailModal from "./ProjectDetailModal";
-
-const projectListData = [{ type: "팀 프로젝트" }, { type: "개인 프로젝트" }];
-
-const TeamProjectData = [
-  {
-    id: 1,
-    title: "지도 중심 스팟 공유 서비스",
-    badges: ["디자인", "FE", "BE"],
-    images: "/imgs/projects/spotlight/spotlight-overview.png",
-    description:
-      "영화, 드라마, 아이돌, 애니메이션 등 미디어 콘텐츠들의 명소를 공유하는 웹 서비스입니다",
-  },
-  {
-    id: 2,
-    title: "실시간 공유 타이머 서비스",
-    badges: ["기획", "디자인", "FE", "BE"],
-    images: "/imgs/projects/pogakco/pogakco-overview.png",
-    description:
-      "사용자가 맞춤 설정한 타이머를 공유하여 동일한 학습/업무 사이클을 제공하는 웹 서비스입니다",
-  },
-];
-
+import { PROJECT_SOLO_LIST, PROJECT_TAB, PROJECT_TEAM_LIST } from "@/datas/project-list.data";
 interface ProjectsProps {
-  handleWheel : (event: WheelEvent) => void
+  handleWheel: (event: WheelEvent) => void;
 }
 
-
-const Projects = ({handleWheel} : ProjectsProps) => {
+const Projects = ({ handleWheel }: ProjectsProps) => {
   const [isDetailOpen, setIsDetailOpen] = useState<boolean>(false);
   const [projectType, setProjectType] = useState<string | null>(
-    projectListData[0].type
+    PROJECT_TAB[0].type
   );
+  const [projectID, setProjectID] = useState<number | undefined>();
 
   const onClickProjectType = (e: React.MouseEvent<HTMLElement>) => {
     setProjectType(e.currentTarget.textContent);
   };
 
   const onOpenModal = (id: number) => {
-    document.body.style.overflow = "hidden";
     setIsDetailOpen(true);
+    setProjectID(id);
   };
 
   const onCloseModal = () => {
@@ -52,11 +31,17 @@ const Projects = ({handleWheel} : ProjectsProps) => {
 
   return (
     <>
-      {isDetailOpen && <ProjectDetailModal onCloseModal={onCloseModal} handleWheel={handleWheel}/>}
+      {isDetailOpen && (
+        <ProjectDetailModal
+          onCloseModal={onCloseModal}
+          handleWheel={handleWheel}
+          projectID={projectID}
+        />
+      )}
       <Layout title={SECTION_TITLE.project}>
         <div className="w-full h-full flex flex-col">
           <ul className="my-10 flex gap-5 font-bold text-2xl">
-            {projectListData.map((item, index) => (
+            {PROJECT_TAB.map((item, index) => (
               <li
                 key={item.type}
                 onClick={onClickProjectType}
@@ -71,11 +56,23 @@ const Projects = ({handleWheel} : ProjectsProps) => {
             ))}
           </ul>
           <div className="w-full h-[674px] grid grid-cols-3 grid-rows-2 gap-5">
-            {TeamProjectData.map((item, index) => (
-              <li key={item.title} onClick={() => onOpenModal(item.id)}>
-                <ProjectCard {...item} />
-              </li>
-            ))}
+            {projectType === "팀 프로젝트" ? (
+              <>
+                {PROJECT_TEAM_LIST.map((item, index) => (
+                  <li key={item.id} onClick={() => onOpenModal(item.id)}>
+                    <ProjectCard {...item} />
+                  </li>
+                ))}
+              </>
+            ) : (
+              <>
+                {PROJECT_SOLO_LIST.map((item, index) => (
+                  <li key={item.id} onClick={() => onOpenModal(item.id)}>
+                    <ProjectCard {...item} />
+                  </li>
+                ))}
+              </>
+            )}
           </div>
         </div>
       </Layout>
