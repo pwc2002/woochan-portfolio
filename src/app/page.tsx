@@ -8,6 +8,9 @@ import Projects from "@/components/projects/Projects";
 import Skill from "@/components/skill/Skill";
 import { useHandleWheel } from "@/hooks/useHandleWheel";
 import { useEffect } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 export default function Home() {
   const { handleWheel, handleTouchMove } = useHandleWheel(false);
 

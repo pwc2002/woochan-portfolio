@@ -26,7 +26,7 @@ export const useHandleWheel = (isModalOpen : boolean) => {
     const sections = document.body.children;
     const newSectionIndex = Math.max(
       0,
-      Math.min(currentSectionRef.current + direction, sections.length - 1) // ref 사용
+      Math.min(currentSectionRef.current + direction, sections.length - 1)
     );
 
     if (newSectionIndex !== currentSectionRef.current) {
@@ -40,9 +40,9 @@ export const useHandleWheel = (isModalOpen : boolean) => {
 
       setTimeout(() => {
         isScrolling.current = false;
-      }, 2000);
+      }, 1000);
     }
-  }, []); // 의존성 배열 비워둠
+  }, []);
 
   const handleTouchMove = useCallback((event: TouchEvent) => {
     if (isScrolling.current) {

@@ -4,6 +4,7 @@ import { SECTION_TITLE } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
 import ProjectDetailModal from "./ProjectDetailModal";
 import { PROJECT_SOLO_LIST, PROJECT_TAB, PROJECT_TEAM_LIST } from "@/datas/project-list.data";
+
 interface ProjectsProps {
   handleWheel: (event: WheelEvent) => void;
 }

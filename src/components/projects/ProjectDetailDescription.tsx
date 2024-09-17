@@ -1,5 +1,8 @@
+"use client";
+
 import { IdetailData } from "@/models/DetailData.model";
 import React, { ReactNode } from "react";
+import Slider from "react-slick";
 
 interface ListTitleProps {
   title: string;
@@ -28,6 +31,11 @@ interface ProjectDetailDescriptionProps {
 const ProjectDetailDescription = ({
   detailData,
 }: ProjectDetailDescriptionProps) => {
+  const settings = {
+    infinite: true,
+    slidesToShow: 3,
+    speed: 500,
+  };
   if (!detailData) return null;
   return (
     <div className="max-w-[1050px] bg-white h-auto m-auto rounded-lg relative">
@@ -48,15 +56,24 @@ const ProjectDetailDescription = ({
         <h3 className="text-white text-base font-bold">
           {detailData.organize}
         </h3>
-        <div className="w-full h-[300px] flex my-5 rounded-lg gap-5 bg-lightgrey">
-          {/* Todo, 캐러셀로 변경 */}
+        <div className="py-10">
+        <Slider {...settings}>
+            <div className="w-auto h-[300px] px-2">
+              <div className="bg-yellow-300 w-full h-full rounded-lg" />
+            </div>
+            <div className="w-auto h-[300px] px-2">
+              <div className="bg-green-300 w-full h-full rounded-lg" />
+            </div>
+            <div className=" w-auto h-[300px] px-2">
+              <div className="bg-blue-300 w-full h-full rounded-lg" />
+            </div>
+          </Slider>
         </div>
         <div className="w-full flex flex-col gap-5">
           <div className="w-full font-medium h-auto p-5 bg-lightgrey flex flex-col gap-5 rounded-lg">
             {detailData.description.topPart}
             {detailData.description.bottomPart}
           </div>
-          {/* 리스트 섹션 렌더링 */}
           {detailData.lists.map((list, index) => (
             <ListSection
               key={index}
