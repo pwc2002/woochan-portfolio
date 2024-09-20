@@ -11,7 +11,11 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, badges, description, images }: ProjectCardProps) => {
     return (
-        <div className='w-full h-full bg-white flex flex-col gap-2 rounded-lg pb-5 cursor-pointer'>
+        <div className='w-full
+        lg:h-[300px]
+        md:h-[300px]
+        h-[300px]
+        bg-white flex flex-col gap-2 rounded-lg pb-5 cursor-pointer'>
             <div className='relative w-full h-[60%]'>
                 <Image
                     src={images}

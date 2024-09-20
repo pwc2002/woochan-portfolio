@@ -40,14 +40,12 @@ const AboutDescription = () => {
                 gap-2
                 ">
                     <div className="w-full max-w-[750px] rounded-lg bg-pureWhite text-primary font-extrabold flex items-center
-                    lg:text-2xl lg:px-3 lg:py-2
                     md:text-xl md:px-2 md:py-2
                     text-lg px-2 py-1              
                     ">
                         {item.title}
                     </div>
                     <ul className="w-full max-w-[750px] text-white flex flex-col gap-1
-                    lg:text-2xl
                     md:text-xl
                     text-md      
                     ">

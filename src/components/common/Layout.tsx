@@ -14,9 +14,9 @@ const Layout = ({ children, title }: LayoutProps) => {
     lg:max-w-[1045px] lg:py-20
     md:max-w-[760px] md:py-20
     max-w-full py-10 px-5
-    h-screen m-auto"
+    h-auto m-auto"
     >
-      <div className="w-full h-8 flex items-center">
+      <div className="w-full flex items-center">
         <hr className="flex-grow border-solid border-pureWhite mr-5 opacity-70" />
         <h1
           className="text-pureWhite font-bold

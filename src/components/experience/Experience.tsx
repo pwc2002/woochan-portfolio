@@ -11,8 +11,8 @@ const experienceData = [
     ),
     date: "( 2024.03 - 2024.09 )",
     description: [
-      "React.js, Node.js를 활용한 자바스크립트 기반 웹 풀 사이클 학습",
-      "개인 프로젝트 4회 팀 프로젝트 2회 등 다수의 프로젝트 진행",
+      "React, Node 기반의 자바스크립트 웹 풀사이클 과정을 학습할 수 있었습니다",
+      "개인 프로젝트 4회, 팀 프로젝트 2회 등 프로젝트를 다수 진행하여 실무 능력을 키울 수 있었습니다",
     ],
   },
   {
@@ -48,23 +48,51 @@ const experienceData = [
 const Experience = () => {
   return (
     <Layout title={SECTION_TITLE.experience}>
-      <div className="w-full h-full flex flex-col">
-        <div className="w-full h-11 rounded-lg bg-pureWhite px-3 mt-10 font-extrabold flex items-center text-primary text-xl">
+      <div className="w-full flex flex-col"
+      >
+        <div className="w-full h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
           학력 및 교육
         </div>
-        <ul className="w-full h-[70%] flex flex-col justify-center ">
+        <ul className="w-full flex flex-col justify-center
+        ">
           {experienceData.map((experience, index) => (
             <li
               key={index}
-              className="flex-1 flex border-b border-white border-solid border-opacity-20"
+              className="flex border-b border-white border-solid border-opacity-20 p-3
+              lg:flex-row 
+              md:flex-row md:h-[200px]
+              flex-col my-4 h-[250px]
+              
+              "
             >
-              <div className="flex-1 flex flex-col justify-center items-center font-extrabold text-white text-xl">
-                <h1 className="text-center">{experience.title}</h1>
-                <p className="mt-5 text-xl text-grey">{experience.date}</p>
+              <div className="flex-1 flex flex-col font-extrabold text-white
+              lg:justify-center lg:items-center
+              md:justify-center md:items-center
+              justify-start items-start
+              
+              ">
+                <h1 className="
+                lg:text-center lg:text-xl
+                md:text-center md:text-xl
+                text-left text-lg text-pureWhite
+                ">{experience.title}</h1>
+                <p className="
+                lg:mt-5 lg:text-xl
+                md:mt-5 md:text-xl
+                mt-2 text-base text-grey">{experience.date}</p>
               </div>
-              <ul className="flex-1 flex justify-center font-medium text-white flex-col text-lg">
+              <ul className="flex-1 flex justify-center font-medium text-white flex-col
+              lg:text-lg
+              md:text-lg
+              text-md
+              ">
                 {experience.description.map((desc, descIndex) => (
-                  <li key={descIndex} className="list-disc">
+                  <li key={descIndex} className="
+                  lg:list-disc
+                  md:list-disc
+                  list-none
+                  mb-1
+                  ">
                     {desc}
                   </li>
                 ))}

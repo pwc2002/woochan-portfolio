@@ -5,12 +5,9 @@ import ProjectCard from "./ProjectCard";
 import ProjectDetailModal from "./ProjectDetailModal";
 import { PROJECT_SOLO_LIST, PROJECT_TAB, PROJECT_TEAM_LIST } from "@/datas/project-list.data";
 
-
 const Projects = () => {
   const [isDetailOpen, setIsDetailOpen] = useState<boolean>(false);
-  const [projectType, setProjectType] = useState<string | null>(
-    PROJECT_TAB[0].type
-  );
+  const [projectType, setProjectType] = useState<string | null>(PROJECT_TAB[0].type);
   const [projectID, setProjectID] = useState<number | undefined>();
 
   const onClickProjectType = (e: React.MouseEvent<HTMLElement>) => {
@@ -31,15 +28,12 @@ const Projects = () => {
   return (
     <>
       {isDetailOpen && (
-        <ProjectDetailModal
-          onCloseModal={onCloseModal}
-          projectID={projectID}
-        />
+        <ProjectDetailModal onCloseModal={onCloseModal} projectID={projectID} />
       )}
       <Layout title={SECTION_TITLE.project}>
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full min-h-auto flex flex-col">
           <ul className="my-10 flex gap-5 font-bold text-2xl">
-            {PROJECT_TAB.map((item, index) => (
+            {PROJECT_TAB.map((item) => (
               <li
                 key={item.type}
                 onClick={onClickProjectType}
@@ -53,23 +47,24 @@ const Projects = () => {
               </li>
             ))}
           </ul>
-          <div className="w-full h-[674px] grid grid-cols-3 grid-rows-2 gap-5">
+          <div className="w-full grid h-auto gap-5
+          lg:grid-cols-3
+          md:grid-cols-2
+          grid-cols-1
+          min-h-[650px]
+          ">
             {projectType === "팀 프로젝트" ? (
-              <>
-                {PROJECT_TEAM_LIST.map((item, index) => (
-                  <li key={item.id} onClick={() => onOpenModal(item.id)}>
-                    <ProjectCard {...item} />
-                  </li>
-                ))}
-              </>
+              PROJECT_TEAM_LIST.map((item) => (
+                <li key={item.id} onClick={() => onOpenModal(item.id)}>
+                  <ProjectCard {...item} />
+                </li>
+              ))
             ) : (
-              <>
-                {PROJECT_SOLO_LIST.map((item, index) => (
-                  <li key={item.id} onClick={() => onOpenModal(item.id)}>
-                    <ProjectCard {...item} />
-                  </li>
-                ))}
-              </>
+              PROJECT_SOLO_LIST.map((item) => (
+                <li key={item.id} onClick={() => onOpenModal(item.id)}>
+                  <ProjectCard {...item} />
+                </li>
+              ))
             )}
           </div>
         </div>

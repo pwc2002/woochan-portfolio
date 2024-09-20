@@ -70,7 +70,11 @@ const Skill = () => {
         <div className="w-full h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
           언어 / 라이브러리 / 프레임워크
         </div>
-        <ul className="grid grid-cols-9 grid-row-2 gap-5">
+        <ul className="grid gap-5 h-auto w-full
+        lg:grid-cols-9
+        md:grid-cols-5
+        grid-cols-3
+        ">
           {techStackData.map((item, index) => (
             <li
               key={item.id}
@@ -81,7 +85,11 @@ const Skill = () => {
         <div className="w-full h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
           협업 / 관리 도구
         </div>
-        <ul className="grid grid-cols-9 grid-row-2 gap-5">
+        <ul className="grid grid-row-2 gap-5
+                lg:grid-cols-9
+        md:grid-cols-5
+        grid-cols-3
+        ">
           {toolStackData.map((item, index) => (
             <li className="w-full h-[96px] rounded-lg bg-pureWhite"></li>
           ))}
