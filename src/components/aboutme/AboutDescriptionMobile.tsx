@@ -14,20 +14,7 @@ const descriptionData = [
                 하나의 문제를 <HighlightText>다양한 시각에서 접근</HighlightText>하는 것을 좋아합니다.
             </>
         ),
-    },
-    {
-        title: "학습하는 개발자",
-        text1: (
-            <>
-                새로운 기술을 배우는 것에 흥미가 있으며 <HighlightText>끊임없는 성장을 도모</HighlightText>합니다.
-            </>
-        ),
-        text2: (
-            <>
-                <HighlightText>프로젝트를 통한 기술 체득을 즐기며</HighlightText> 아티클과 IT 이슈에 관심이 많습니다.
-            </>
-        ),
-    },
+    }
 ];
 
 const AboutDescription = () => {
@@ -39,10 +26,10 @@ const AboutDescription = () => {
                 md:gap-3
                 gap-2
                 ">
-                    <div className="w-full max-w-[750px] rounded-lg bg-pureWhite text-primary font-extrabold flex items-center
-                    lg:text-2xl lg:px-3 lg:py-2
-                    md:text-xl md:px-2 md:py-2
-                    text-lg px-2 py-1              
+                    <div className="w-full max-w-[750px] rounded-lg bg-pureWhite text-primary px-3 py-2 font-extrabold flex items-center
+                    lg:text-2xl
+                    md:text-xl
+                    text-lg                    
                     ">
                         {item.title}
                     </div>

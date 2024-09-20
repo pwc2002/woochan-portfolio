@@ -5,11 +5,8 @@ import ProjectCard from "./ProjectCard";
 import ProjectDetailModal from "./ProjectDetailModal";
 import { PROJECT_SOLO_LIST, PROJECT_TAB, PROJECT_TEAM_LIST } from "@/datas/project-list.data";
 
-interface ProjectsProps {
-  handleWheel: (event: WheelEvent) => void;
-}
 
-const Projects = ({ handleWheel }: ProjectsProps) => {
+const Projects = () => {
   const [isDetailOpen, setIsDetailOpen] = useState<boolean>(false);
   const [projectType, setProjectType] = useState<string | null>(
     PROJECT_TAB[0].type
@@ -22,6 +19,7 @@ const Projects = ({ handleWheel }: ProjectsProps) => {
 
   const onOpenModal = (id: number) => {
     setIsDetailOpen(true);
+    document.body.style.overflow = "hidden";
     setProjectID(id);
   };
 
@@ -35,7 +33,6 @@ const Projects = ({ handleWheel }: ProjectsProps) => {
       {isDetailOpen && (
         <ProjectDetailModal
           onCloseModal={onCloseModal}
-          handleWheel={handleWheel}
           projectID={projectID}
         />
       )}

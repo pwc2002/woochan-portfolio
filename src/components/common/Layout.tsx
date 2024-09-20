@@ -7,22 +7,28 @@ interface LayoutProps {
 
 const Layout = ({ children, title }: LayoutProps) => {
   return (
-    <section id={title} className="w-screen max-w-[1045px] h-screen py-20 m-auto">
+    <section
+      id={title}
+      className="w-screen
+    box-border
+    lg:max-w-[1045px] lg:py-20
+    md:max-w-[760px] md:py-20
+    max-w-full py-10 px-5
+    h-screen m-auto"
+    >
       <div className="w-full h-8 flex items-center">
         <hr className="flex-grow border-solid border-pureWhite mr-5 opacity-70" />
-        <h1 className="text-pureWhite text-lg font-bold">{title}</h1>
+        <h1
+          className="text-pureWhite font-bold
+    lg:text-lg
+    md:text-base
+    text-sm
+        "
+        >
+          {title}
+        </h1>
       </div>
       {children}
-      <div className="w-full flex justify-center items-center -translate-y-10">
-        <dotlottie-player
-          src="https://lottie.host/e300cb38-7d84-4ffc-a5f5-3e79d62df193/qMcWoF9z0E.json"
-          background="transparent"
-          speed="1"
-          style={{ width: "50px", height: "50px" }}
-          loop
-          autoplay
-        ></dotlottie-player>
-      </div>
     </section>
   );
 };

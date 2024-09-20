@@ -7,7 +7,11 @@ import AboutDescription from "./AboutDescription";
 const AboutMe = () => {
   return (
     <Layout title={SECTION_TITLE.aboutMe}>
-      <div className="w-full h-full flex px-[10%] py-24 flex-col items-center gap-20">
+      <div className="w-full h-full flex flex-col items-center
+      lg:gap-20 lg:py-24
+      md:gap-10 md:py-10
+      gap-10 py-0
+      ">
       <AboutProfile/>
       <AboutDescription/>
       </div>
