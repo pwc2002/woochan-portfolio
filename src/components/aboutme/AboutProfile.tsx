@@ -3,21 +3,6 @@ import HighlightText from "../common/HighlightText";
 import { FaUser } from "react-icons/fa";
 import { MdCall, MdEmail } from "react-icons/md";
 
-const profileData = [
-  {
-    icon: <FaUser />,
-    data: "2000.01.19",
-  },
-  {
-    icon: <MdCall />,
-    data: "010-8539-2067",
-  },
-  {
-    icon: <MdEmail />,
-    data: "changchangwoo119@gmail.com",
-  },
-];
-
 const AboutProfile = () => {
   return (
     <div

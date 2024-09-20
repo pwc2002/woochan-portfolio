@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import HighlightText from "../common/HighlightText";
