@@ -22,8 +22,8 @@ const ProjectDetailModal = ({ onCloseModal, projectID }: ProjectDetailModalProps
     <section
       onClick={onClickOverlay}
       id="ProjectDetail"
-      className="pb-10 fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-70 z-10 overflow-y-auto" >
-      <ProjectHeader onCloseModal={onCloseModal} />
+      className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-70 z-10 overflow-y-auto" >
+      <ProjectHeader onCloseModal={onCloseModal} primaryColor={detailData?.primaryColor} />
       <ProjectDetailDescription detailData={detailData} />
     </section>
   );
