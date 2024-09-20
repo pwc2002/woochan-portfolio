@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from "react";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
