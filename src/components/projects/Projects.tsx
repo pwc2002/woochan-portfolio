@@ -6,6 +6,7 @@ import { SECTION_TITLE } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
 import ProjectDetailModal from "./ProjectDetailModal";
 import { PROJECT_SOLO_LIST, PROJECT_TAB, PROJECT_TEAM_LIST } from "@/datas/project-list.data";
+import SlideUp from "../animation/SlideUp";
 
 const Projects = () => {
   const [isDetailOpen, setIsDetailOpen] = useState<boolean>(false);
@@ -36,6 +37,7 @@ const Projects = () => {
         <div className="w-full min-h-auto flex flex-col">
           <ul className="my-10 flex gap-5 font-bold text-2xl">
             {PROJECT_TAB.map((item) => (
+              <SlideUp key={item.type}>
               <li
                 key={item.type}
                 onClick={onClickProjectType}
@@ -47,6 +49,7 @@ const Projects = () => {
               >
                 {item.type}
               </li>
+              </SlideUp>
             ))}
           </ul>
           <div className="w-full grid h-auto gap-5
@@ -56,16 +59,22 @@ const Projects = () => {
           min-h-[650px]
           ">
             {projectType === "팀 프로젝트" ? (
-              PROJECT_TEAM_LIST.map((item) => (
+              PROJECT_TEAM_LIST.map((item, index) => (
+                <SlideUp key={item.id} delay={index * 0.1}>
                 <li key={item.id} onClick={() => onOpenModal(item.id)}>
                   <ProjectCard {...item} />
                 </li>
+                </SlideUp>
+
               ))
             ) : (
-              PROJECT_SOLO_LIST.map((item) => (
+              PROJECT_SOLO_LIST.map((item, index) => (
+                <SlideUp key={item.id} delay={index * 0.1}>
                 <li key={item.id} onClick={() => onOpenModal(item.id)}>
                   <ProjectCard {...item} />
                 </li>
+                </SlideUp>
+
               ))
             )}
           </div>

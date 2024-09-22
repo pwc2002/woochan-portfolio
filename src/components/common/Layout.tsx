@@ -1,4 +1,6 @@
 import React from "react";
+import LengthUp from "../animation/LengthUp";
+import SlideUp from "../animation/SlideUp";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,10 +18,12 @@ const Layout = ({ children, title }: LayoutProps) => {
     max-w-full py-10 px-5
     h-auto m-auto"
     >
-      <div className="w-full flex items-center">
-        <hr className="flex-grow border-solid border-pureWhite mr-5 opacity-70" />
-        <h1
-          className="text-pureWhite font-bold
+      <div className="w-full flex items-center justify-between">
+        <div className="flex-grow mr-5">
+        <LengthUp />
+        </div>
+        <SlideUp delay={0.5}>
+        <h1 className="text-pureWhite font-bold
     lg:text-lg
     md:text-base
     text-sm
@@ -27,6 +31,7 @@ const Layout = ({ children, title }: LayoutProps) => {
         >
           {title}
         </h1>
+        </SlideUp>
       </div>
       {children}
     </section>

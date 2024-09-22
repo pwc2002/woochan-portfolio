@@ -58,9 +58,9 @@ const Experience = () => {
           {experienceData.map((experience, index) => (
             <li
               key={index}
-              className="flex border-b border-white border-solid border-opacity-20 p-3
+              className="flex border-b border-white border-solid border-opacity-20
               lg:flex-row 
-              md:flex-row md:h-[200px]
+              md:flex-row md:h-[150px] md:my-1
               flex-col my-4 h-[250px]
               
               "
