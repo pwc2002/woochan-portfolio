@@ -15,12 +15,7 @@ export const SlideUpScroll = ({ delay = 0, children }: SlideUpProps) => {
     <motion.div
       initial={{ opacity: 0, y: 15 }}
       transition={{ delay: delay, duration: 0.7 }}
-      animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
-      onViewportEnter={() => {
-        if (!hasAnimated) {
-          setHasAnimated(true);
-        }
-      }}
+      whileInView={{opacity:1, y:0}}
     >
       {children}
     </motion.div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { SECTION_TITLE } from "@/constants/constants";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SlideUpComponent } from "../animation/SlideUp";
 
 const NavBar = () => {
@@ -16,8 +16,7 @@ const NavBar = () => {
     SECTION_TITLE.contact,
   ];
 
-  const handleScrollToSection = (section : any) => {
-    console.log(section)
+  const handleScrollToSection = (section : string) => {
     if (isClicked) return;
     setIsClicked(true);
     const sectionElement = document.getElementById(section);
@@ -29,6 +28,30 @@ const NavBar = () => {
       }, 500);
     }
   };
+
+  const handleScroll = () => {
+    const sections = menuItems.map(item => document.getElementById(item));
+    const scrollPosition = window.scrollY + window.innerHeight / 2; // 스크롤 위치 + 뷰포트 중앙
+    console.log(scrollPosition)
+
+    sections.forEach(section => {
+      if (section) {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          setCurrentSelection(section.id);
+        }
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="fixed top-1/2 transform -translate-y-1/2 right-10 flex flex-col justify-center h-full py-20">
