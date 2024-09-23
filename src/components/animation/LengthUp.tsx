@@ -8,7 +8,7 @@ interface LengthUpProps {
 }
 
 const LengthUp = ({ delay = 0 }: LengthUpProps) => {
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(true);
 
   return (
     <motion.div

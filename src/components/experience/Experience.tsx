@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
+import { SlideUpScroll } from "../animation/SlideUp";
 
 const experienceData = [
   {
@@ -11,8 +12,8 @@ const experienceData = [
     ),
     date: "( 2024.03 - 2024.09 )",
     description: [
-      "React, Node 기반의 자바스크립트 웹 풀사이클 과정을 학습할 수 있었습니다",
-      "개인 프로젝트 4회, 팀 프로젝트 2회 등 프로젝트를 다수 진행하여 실무 능력을 키울 수 있었습니다",
+      "React, Node 기반의 자바스크립트 웹 풀사이클 과정 학습",
+      "개인 프로젝트 4회, 팀 프로젝트 2회 등 프로젝트 다수 진행",
     ],
   },
   {
@@ -50,12 +51,15 @@ const Experience = () => {
     <Layout title={SECTION_TITLE.experience}>
       <div className="w-full flex flex-col"
       >
+        <SlideUpScroll>
         <div className="w-full h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
           학력 및 교육
         </div>
+        </SlideUpScroll>
         <ul className="w-full flex flex-col justify-center
         ">
           {experienceData.map((experience, index) => (
+            <SlideUpScroll key={index} delay={index*0.1}>
             <li
               key={index}
               className="flex border-b border-white border-solid border-opacity-20
@@ -98,8 +102,10 @@ const Experience = () => {
                 ))}
               </ul>
             </li>
+            </SlideUpScroll>
           ))}
         </ul>
+        
       </div>
     </Layout>
   );

@@ -8,23 +8,26 @@ interface SlideUpProps {
     children: ReactNode;
 }
 
-const SlideUp = ({ delay = 0, children }: SlideUpProps) => {
-    const [hasAnimated, setHasAnimated] = useState(false);
-
+export const SlideUpScroll = ({ delay = 0, children }: SlideUpProps) => {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
+            initial={{ opacity: 0, y: 15 }}
             transition={{ delay: delay, duration: 0.7 }}
-            onViewportEnter={() => {
-                if (!hasAnimated) {
-                    setHasAnimated(true);
-                }
-            }}
+            whileInView={{ opacity: 1, y: 0 }}
         >
             {children}
         </motion.div>
     );
 }
 
-export default SlideUp;
+export const SlideUpComponent = ({ delay = 0, children }: SlideUpProps) => {
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: delay, duration: 0.7 }}
+        >
+            {children}
+        </motion.div>
+    );
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import HighlightText from "../common/HighlightText";
-import SlideUp from "../animation/SlideUp";
+import { SlideUpScroll } from "../animation/SlideUp";
 
 const descriptionData = [
     {
@@ -35,7 +35,7 @@ const AboutDescription = () => {
     return (
         <div className="w-full flex flex-col gap-14">
             {descriptionData.map((item, index) => (
-                <SlideUp key={index}>
+                <SlideUpScroll key={index}>
                 <div key={index} className="w-full flex flex-col  items-center
                 lg:gap-5
                 md:gap-3
@@ -55,7 +55,7 @@ const AboutDescription = () => {
                         <li>{item.text2}</li>
                     </ul>
                 </div>
-                </SlideUp>
+                </SlideUpScroll>
             ))}
         </div>
     );

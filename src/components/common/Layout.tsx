@@ -1,6 +1,5 @@
 import React from "react";
 import LengthUp from "../animation/LengthUp";
-import SlideUp from "../animation/SlideUp";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -22,7 +21,6 @@ const Layout = ({ children, title }: LayoutProps) => {
         <div className="flex-grow mr-5">
         <LengthUp />
         </div>
-        <SlideUp delay={0.5}>
         <h1 className="text-pureWhite font-bold
     lg:text-lg
     md:text-base
@@ -31,7 +29,6 @@ const Layout = ({ children, title }: LayoutProps) => {
         >
           {title}
         </h1>
-        </SlideUp>
       </div>
       {children}
     </section>

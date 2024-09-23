@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { SiVelog } from "react-icons/si";
+import { SlideUpComponent, SlideUpScroll } from "../animation/SlideUp";
 
 const modalIconData = [
   {
@@ -28,7 +29,8 @@ const ProjectHeader = ({ onCloseModal, primaryColor }: ProjectHeaderProps) => {
     <>
       <div className="max-w-[1050px] md:my-8 m-auto justify-between md:flex hidden">
         <ul className="flex gap-6">
-          {modalIconData.map((item) => (
+          {modalIconData.map((item, index) => (
+          <SlideUpComponent key={item.text} delay={index*0.2}>
             <li key={item.text} className="flex flex-col justify-center items-center gap-[10px] cursor-pointer">
               <div className="w-16 h-16 rounded-full bg-white flex justify-center items-center">
                 <span className="text-3xl"
@@ -37,6 +39,8 @@ const ProjectHeader = ({ onCloseModal, primaryColor }: ProjectHeaderProps) => {
               </div>
               <h3 className="text-white font-medium text-sm">{item.text}</h3>
             </li>
+            </SlideUpComponent>
+
           ))}
         </ul>
         <div className="flex flex-col justify-center items-center gap-[10px] cursor-pointer" onClick={onCloseModal}>
@@ -53,7 +57,8 @@ const ProjectHeader = ({ onCloseModal, primaryColor }: ProjectHeaderProps) => {
         flex justify-center items-center"
       >
         <ul className="flex gap-5">
-          {modalIconData.map((item) => (
+          {modalIconData.map((item, index) => (
+            <SlideUpComponent key={item.text} delay={index*0.2}>
             <li key={item.text} className="flex flex-col justify-center items-center gap-[10px] cursor-pointer">
               <div className="w-10 h-10 rounded-full  flex justify-center items-center"
                       style={{ backgroundColor: primaryColor }}
@@ -62,6 +67,7 @@ const ProjectHeader = ({ onCloseModal, primaryColor }: ProjectHeaderProps) => {
                 <span className="text-xl text-pureWhite">{item.icons}</span>
               </div>
             </li>
+            </SlideUpComponent>
           ))}
         </ul>
           <div className="w-10 h-10 rounded-full bg-secondary flex justify-center items-center fixed right-2 top-2" onClick={onCloseModal}>

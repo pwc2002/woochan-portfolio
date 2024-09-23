@@ -3,6 +3,7 @@
 import { IdetailData } from "@/models/DetailData.model";
 import React, { ReactNode } from "react";
 import Slider from "react-slick";
+import PopUp from "../animation/PopUp";
 
 interface ListTitleProps {
   title: string;
@@ -61,7 +62,11 @@ const ProjectDetailDescription = ({
   if (!detailData) return null;
 
   return (
-    <div className="max-w-[1050px] bg-white h-auto m-auto rounded-lg relative">
+    <PopUp>
+    <div className="max-w-[1050px] bg-white h-auto m-auto rounded-lg relative
+    md:pb-0
+    pb-10
+    ">
       <div
         className="w-full h-[420px] md:rounded-tl-lg md:rounded-tr-lg absolute z-0
         "
@@ -126,6 +131,7 @@ const ProjectDetailDescription = ({
         </div>
       </div>
     </div>
+    </PopUp>
   );
 };
 
