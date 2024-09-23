@@ -8,12 +8,13 @@ interface LengthUpProps {
 }
 
 const LengthUp = ({ delay = 0 }: LengthUpProps) => {
-  const [hasAnimated, setHasAnimated] = useState(true);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   return (
     <motion.div
       className="border-solid border-pureWhite opacity-70 h-[1px] bg-white"
       initial={{ width: 0 }}
+      animate={hasAnimated ? { width: "100%" } : {}}
       transition={{
         delay: delay,
         duration: 0.5,
@@ -21,7 +22,6 @@ const LengthUp = ({ delay = 0 }: LengthUpProps) => {
         stiffness: 100,
         damping: 40,
       }}
-      animate={hasAnimated ? { width: "100%" } : {}}
       onViewportEnter={() => {
         if (!hasAnimated) {
           setHasAnimated(true);

@@ -50,6 +50,8 @@ const Experience = () => {
   return (
     <Layout title={SECTION_TITLE.experience}>
       <div className="w-full flex flex-col"
+                    style={{ minHeight: "calc(100vh - 140px)" }}
+
       >
         <SlideUpScroll>
         <div className="w-full h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
