@@ -66,6 +66,6 @@ export const PROJECT_SOLO_LIST = [
     badges: ["기획", "디자인", "FE"],
     images: "/imgs/projects/pogakco/pogakco-overview.png",
     description:
-      "GPT API와 YOLO를 활용하여, 사용자가 제공한 이미지를 인식하고, 이에 대한 특성을 학습한 챗 봇을 제공하는 교육용 챗 봇 서비스 입니다." 
+      "사용자가 제공한 이미지를 인식하고, 이에 대한 특성을 학습한 챗 봇을 제공하는 교육용 챗 봇 서비스 입니다." 
   }
 ];

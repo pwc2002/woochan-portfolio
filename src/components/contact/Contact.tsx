@@ -36,7 +36,7 @@ const Contact = () => {
         <br/> 오늘도 행복한 하루 되세요 😊
       </h3>
       </SlideUpScroll>
-      <SlideUpScroll delay={0.3}>
+      <SlideUpScroll delay={0.25}>
       <div className='w-full h-[500px] rounded-lg bg-white'>
       </div>
       </SlideUpScroll>
