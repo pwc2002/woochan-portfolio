@@ -5,8 +5,9 @@ import React, { useState, useEffect } from "react";
 import { SlideUpComponent } from "../animation/SlideUp";
 
 const NavBar = () => {
-  const [currentSelect, setCurrentSelection] = useState("");
-  const [isClicked, setIsClicked] = useState(false);
+  const [currentSelect, setCurrentSelection] = useState<string>("");
+  const [isClicked, setIsClicked] = useState<boolean>(false);
+  const [isNav, setIsNav] = useState<boolean>(false);
 
   const menuItems = [
     SECTION_TITLE.aboutMe,
@@ -16,7 +17,7 @@ const NavBar = () => {
     SECTION_TITLE.contact,
   ];
 
-  const handleScrollToSection = (section : string) => {
+  const handleScrollToSection = (section: string) => {
     if (isClicked) return;
     setIsClicked(true);
     const sectionElement = document.getElementById(section);
@@ -32,7 +33,9 @@ const NavBar = () => {
   const handleScroll = () => {
     const sections = menuItems.map(item => document.getElementById(item));
     const scrollPosition = window.scrollY + window.innerHeight / 2; // 스크롤 위치 + 뷰포트 중앙
-    console.log(scrollPosition)
+
+    if (window.scrollY < window.innerHeight) setIsNav(false);
+    else setIsNav(true);
 
     sections.forEach(section => {
       if (section) {
@@ -54,7 +57,11 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="fixed top-1/2 transform -translate-y-1/2 right-10 flex flex-col justify-center h-full py-20">
+    <div
+      className={`fixed top-1/2 transform -translate-y-1/2 right-10 flex flex-col justify-center h-full py-20 transition-opacity duration-300 ${
+        isNav ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="w-[1px] h-[35%] bg-pureWhite mx-auto opacity-70" />
       <div className="flex flex-col justify-center items-center gap-6 font-bold my-10">
         {menuItems.map((item, index) => (
