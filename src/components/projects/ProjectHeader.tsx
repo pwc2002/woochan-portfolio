@@ -3,6 +3,7 @@ import { FaGithub, FaLink } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { SiVelog } from "react-icons/si";
 import { SlideUpComponent, SlideUpScroll } from "../animation/SlideUp";
+import { AnimatePresence } from "framer-motion";
 
 const modalIconData = [
   {

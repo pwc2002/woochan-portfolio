@@ -60,19 +60,19 @@ export const libraryData = [
       svgURL: "/imgs/skill/Redux.svg"
     },
     {
-      id:101,
+      id:102,
       title: "TaliwindCSS",
       description : [""],
       svgURL: "/imgs/skill/TailwindCSS-Light.svg"
     },
     {
-      id:101,
+      id:103,
       title: "StyledComponents",
       description : [""],
       svgURL: "/imgs/skill/StyledComponents.svg"
     },
     {
-      id:101,
+      id:104,
       title: "Emotion-Light",
       description : [""],
       svgURL: "/imgs/skill/Emotion-Light.svg"

@@ -53,15 +53,15 @@ const AboutProfile = () => {
         "
         >
           <SlideUpScroll>
-          <li className="flex gap-3">
+          <li className="flex gap-3 items-center">
             <FaUser />
             2000.01.19
           </li>
-          <li className="flex gap-3">
+          <li className="flex gap-3 items-center">
             <MdCall />
             010-8539-2067
           </li>
-          <li className="flex gap-3">
+          <li className="flex gap-3 items-center">
             <MdEmail />
             changchangwoo119@gmail.com
           </li>

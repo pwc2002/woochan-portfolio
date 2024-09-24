@@ -1,5 +1,6 @@
 import React from "react";
 import LengthUp from "../animation/LengthUp";
+import { SlideUpScroll } from "../animation/SlideUp";
 
 interface LayoutProps {
   children: React.ReactNode;
