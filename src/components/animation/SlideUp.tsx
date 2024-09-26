@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import {motion } from "framer-motion";
 
 interface SlideUpProps {
@@ -9,8 +9,6 @@ interface SlideUpProps {
 }
 
 export const SlideUpScroll = ({ delay = 0, children }: SlideUpProps) => {
-  const [hasAnimated, setHasAnimated] = useState(false);
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}

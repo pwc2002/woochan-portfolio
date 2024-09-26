@@ -11,7 +11,7 @@ const Fade = ({delay = 0, children} : FadeProps) => {
     <motion.div
       initial={{ opacity: 0}}
       animate={{ opacity: 1}}
-      transition={{ delay: 0}}
+      transition={{ delay: delay}}
       exit={{ opacity: 0 }}
     >
       {children}

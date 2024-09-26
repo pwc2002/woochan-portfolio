@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import { SlideUpScroll } from "../animation/SlideUp";
