@@ -2,7 +2,6 @@ import React from "react";
 import ProjectHeader from "./ProjectHeader";
 import ProjectDetailDescription from "./ProjectDetailDescription";
 import { projectDetailData } from "@/datas/project-detail.data";
-import PopUp from "../animation/PopUp";
 
 interface ProjectDetailModalProps {
   onCloseModal: () => void;
@@ -30,6 +29,7 @@ const ProjectDetailModal = ({
         <ProjectHeader
           onCloseModal={onCloseModal}
           primaryColor={detailData?.primaryColor}
+          URLS={detailData?.URLS}
         />
         <ProjectDetailDescription detailData={detailData} />
     </section>

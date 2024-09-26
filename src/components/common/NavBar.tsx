@@ -44,7 +44,7 @@ const NavBar = () => {
     const sections = menuItems.map((item) => document.getElementById(item));
     const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-    if (window.scrollY < window.innerHeight-150) setIsNav(false);
+    if (window.scrollY < window.innerHeight - 150) setIsNav(false);
     else setIsNav(true);
 
     sections.forEach((section) => {
@@ -81,11 +81,13 @@ const NavBar = () => {
                   <SlideUpComponent key={item} delay={index * 0.1}>
                     <div
                       onClick={() => handleScrollToSection(item)}
-                      className={`cursor-pointer w-32 text-center duration-300 ${
-                        currentSelect === item
-                          ? "text-pureWhite text-2xl font-bold"
-                          : "text-grey text-sm"
-                      }`}
+                      className={`cursor-pointer w-32 text-center duration-300
+                        hover:opacity-60
+                        ${
+                          currentSelect === item
+                            ? "text-pureWhite text-2xl font-bold"
+                            : "text-grey text-sm"
+                        }`}
                     >
                       {item}
                     </div>
@@ -118,11 +120,13 @@ const NavBar = () => {
                           <SlideUpComponent key={item} delay={index * 0.1}>
                             <div
                               onClick={() => handleScrollToSection(item)}
-                              className={`cursor-pointer w-full text-left duration-300 mb-1 ${
-                                currentSelect === item
-                                  ? "text-pureWhite text-2xl font-bold"
-                                  : "text-grey text-sm"
-                              }`}
+                              className={`cursor-pointer w-full text-left duration-300 mb-1
+                                hover:opacity-60
+                                ${
+                                  currentSelect === item
+                                    ? "text-pureWhite text-2xl font-bold"
+                                    : "text-grey text-sm"
+                                }`}
                             >
                               {item}
                             </div>

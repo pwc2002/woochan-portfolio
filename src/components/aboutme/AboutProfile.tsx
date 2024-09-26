@@ -12,10 +12,12 @@ const AboutProfile = () => {
       md:flex-row md:gap-28 md:min-h-64
       flex-col gap-5 h-auto mt-10">
       <SlideUpScroll>
-      <img className="
+      <img 
+      src="/imgs/changwoo-picture.jpg"
+      className="
       lg:w-[250px] lg:h-auto
       md:w-[250px] md:h-auto
-      w-[200px] h-[200px]
+      w-[200px] h-[250px]
       
       bg-pureWhite border-solid rounded-lg border-white"></img>
       </SlideUpScroll>

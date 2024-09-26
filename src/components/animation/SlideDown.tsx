@@ -12,7 +12,7 @@ const SlideDown = ({ children }: SlideDownProps) => {
       className="flex flex-col text-left bg-secondary bg-opacity-80 backdrop-blur-sm overflow-hidden"  
       initial={{ height: 0, opacity: 0 }} 
       animate={{ height: "auto", opacity: 1 }} 
-      exit={{ height: 0, opacity: 0 }} 
+      exit={{opacity: 0}} 
       transition={{ duration: 0.4, ease: "easeInOut" }}  
     > 
       <div className="p-4">  
