@@ -67,7 +67,7 @@ const Projects = () => {
           min-h-[650px]
           "
           >
-            {projectType === "팀 프로젝트"
+            {projectType === "프로젝트"
               ? PROJECT_TEAM_LIST.map((item, index) => (
                   <SlideUpScroll key={item.id} delay={index * 0.1}>
                     <li key={item.id} onClick={() => onOpenModal(item.id)}>

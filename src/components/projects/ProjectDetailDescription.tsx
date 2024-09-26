@@ -108,14 +108,14 @@ const ProjectDetailDescription = ({
           </h3>
           <div className="py-5">
             <Slider {...settings}>
-              {detailData.imgs.map((url, index) => (
+              {detailData.imgs.map((url) => (
                 <div
                 key={url}
                   className="w-auto md:h-[300px]
                 h-[250px]
                 px-2"
                 >
-                  <img src={url} className="object-cover w-full h-full rounded-lg" />
+                  <img src={url} className="object-cover w-full h-full rounded-lg border border-solid border-lightgrey" />
                 </div>
               ))}
             </Slider>
