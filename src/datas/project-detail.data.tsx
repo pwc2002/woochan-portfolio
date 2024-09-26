@@ -420,92 +420,56 @@ export const projectDetailData = [
     ],
   },
   {
-    id: 101,
-    primaryColor: "#F19AC9",
+    id: 102,
+    primaryColor: "#EA9292",
     URLS: {
-      githubURL: "https://github.com/changchangwoo/Eye_love_you",
-      blogURL: "null",
-      serviceURL: "null",
+      githubURL: "https://github.com/changchangwoo/POKE-MATCH-TYPE",
+      blogURL: "https://velog.io/@changwoo/%ED%9A%A8%EA%B3%BC%EB%8A%94-%EA%B5%89%EC%9E%A5%ED%96%88%EB%8B%A4-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
+      serviceURL: "https://poke-match-type.vercel.app/",
       serviceBoolean: true,
     },
-    title: "아이 러브 유 (Eye-Love-You)",
-    subTitle: "눈 깜박임 감지 기반 안구 케어 서비스",
-    workTime: "2024.03.22 - 2024.11.14",
-    organize: "4인 개발 (본인 포함 프론트엔드 1명, 백엔드 1명, 디자이너 2명)",
+    title: "포켓몬 약점 계산기",
+    subTitle: "POKE API를 활용한 토이 프로젝트",
+    workTime: "2024.06.13 - 2024.06.16",
+    organize: "1인 개발",
     imgs: [
-      "/imgs/projects/eyeloveyou/eyeloveyou-overview.png",
-      "/imgs/projects/eyeloveyou/ely1.png",
-      "/imgs/projects/eyeloveyou/ely2.png",
-      "/imgs/projects/eyeloveyou/ely3.png",
-      "/imgs/projects/eyeloveyou/ely4.jpg",
+      "/imgs/projects/pokematch/pokematch-overview.png",
+      "/imgs/projects/pokematch/pm1.png",
+      "/imgs/projects/pokematch/pm2.png",
     ],
     description: {
-      topPart: (
-        <p>
-          <span className="font-bold">
-            🏆 동양미래대학교 2023 스마트 SW 프로젝트 (졸업작품) 경연 대회
-            우수상
-          </span>
-        </p>
-      ),
       bottomPart: (
         <p>
-          아이러브유는 현대 사회의 빈번한 미디어 기기의 사용으로 인한
-          안구건조증과 같은 눈 건강 문제를 예방하기 위해 기획된 아이케어
-          프로젝트입니다.
+          포켓몬의 약점 시스템에 적응하기 어려운 초보자들을 대상으로 입력된 포켓몬과 타입을 기반으로 약점을 간편하게 제공하는 웹 서비스입니다. 
           <br />
-          Blink 모델을 통해 사용자의 눈 깜박임을 식별하고 경고음을 출력하며,
-          이를 통해 수집한 데이터를 시각화 자료로 변환하여 사용자 개별 안구 습관
-          점검 기능을 제공합니다.
+          외부 API (POKE API) 활용과 리액트 쿼리를 통한 데이터 캐싱의 이해 향상을 목적으로 구현하였습니다.
         </p>
       ),
     },
     lists: [
       {
-        title: "담당 기능",
+        title: "학습 기능",
         items: (
           <ul className="w-auto flex flex-col gap-2">
             <ul>
-              <li className="font-bold">기획</li>
+              <li className="font-bold">반응형 컴포넌트 구현</li>
+            </ul>
+            <ul>
+              <li className="font-bold">포켓몬 검색 기반 약점 파악</li>
               <li className="px-3 text-lightgrey">
-                팀장, 프로젝트 기획
+                포켓몬 검색 자동완성
+              </li>
+              <li className="px-3 text-lightgrey">
+                검색 포켓몬 정보 및 약점 계산 출력
               </li>
             </ul>
             <ul>
-              <li className="font-bold">웹 프론트엔드 구현 (React)</li>
+              <li className="font-bold">타입 검색 기반 약점 파악</li>
               <li className="px-3 text-lightgrey">
-                Rechats 라이브러리를 활용한 데이터 시각화
+                최대 2개의 타입을 통해 약점 계산 출력
               </li>
               <li className="px-3 text-lightgrey">
-                Kakao API (Shaer, Map) 를 활용한 공유하기, 주변안과 지도 기능
-              </li>
-              <li className="px-3 text-lightgrey">
-                Socket-IO를 활용한 실시간 카메라 이미지 통신
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">모바일 프론트엔드 구현 (React-Native)</li>
-              <li className="px-3 text-lightgrey">
-                React-Native-Chart-Kit 라이브러리를 사용한 데이터 시각화
-              </li>
-              <li className="px-3 text-lightgrey">
-                Google Maps API를 활용한 주변안과 지도
-              </li>
-              <li className="px-3 text-lightgrey">
-                Expo-Face-Detector 라이브러리를 활용한 모바일 눈 깜박임 기능
-              </li>
-            </ul>
-
-            <ul>
-              <li className="font-bold">눈 깜박임 감지 서버 구현 (Python Flask)</li>
-              <li className="px-3 text-lightgrey">
-                Flask Socket-IO를 활용한 눈 깜박임 감지 서버 구현
-              </li>
-              <li className="px-3 text-lightgrey">
-                Keras 라이브러리를 사용한 사용자 이미지 Blink 모델 적용
-              </li>
-              <li className="px-3 text-lightgrey">
-                Blink 모델 식별 데이터를 기반으로 한 눈 깜박임 알고리즘 구현 
+                특성 기반 약점 파악
               </li>
             </ul>
           </ul>
@@ -514,22 +478,66 @@ export const projectDetailData = [
       {
         title: "기술 키워드",
         items: (
+          <ul className="w-auto flex">
+            React, TypeScript, Tanstack-Query, Poke-API
+          </ul>
+        ),
+      },
+    ],
+  },
+  {
+    id: 103,
+    primaryColor: "#002351",
+    URLS: {
+      githubURL: "https://github.com/changchangwoo/3-line-king",
+      blogURL: "https://velog.io/@changwoo/%EB%8B%B9%EC%8B%A0%EC%9D%98-%EC%88%9C%EB%B0%9C%EB%A0%A5%EC%9D%84-%ED%8F%89%EA%B0%80%ED%95%B4%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4-%EC%82%BC%ED%96%89%EC%8B%9C%EC%9D%98-%EC%99%95",
+      serviceURL: "null",
+      serviceBoolean: false,
+    },
+    title: "삼행시의 왕",
+    subTitle: "ChatGPT를 활용한 삼행시 평가 서비스",
+    workTime: "2024.06.13 - 2024.06.16",
+    organize: "1인 개발",
+    imgs: [
+      "/imgs/projects/3lineking/3lineking-overview.png",
+      "/imgs/projects/3lineking/3line.gif",
+      "/imgs/projects/3lineking/3line2.gif",
+    ],
+    description: {
+      bottomPart: (
+        <p>
+          사용자로부터 삼행시를 입력받고, 이에 대한 평가와 랭킹을 제공하는 웹 서비스 입니다. 
+          <br />
+          리액트 공식 문서 학습과정을 통해 이해한 합성 컴포넌트의 실습과 핵심 기능으로서의 GPT-API 활용을 목적으로 구현하였습니다.
+        </p>
+      ),
+    },
+    lists: [
+      {
+        title: "학습 기능",
+        items: (
           <ul className="w-auto flex flex-col gap-2">
-            React, ReactNative, Expo, Flask, Keras, Socket-IO, Kakao API, Google API,
-            Recharts, React-Native-Chart-Kit, Face-Detector
+            <ul>
+              <li className="font-bold">OpenAI API를 활용한 ChatGPT 삼행시 평가 기능 구현</li>
+            </ul>
+            <ul>
+              <li className="font-bold">Node.js Exress 서버, MYSQL 통신을 활용한 사용자 개별 데이터 저장</li>
+            </ul>
+            <ul>
+              <li className="font-bold">합성 컴포넌트 기법을 활용한 컴포넌트 재사용</li>
+            </ul>
+            <ul>
+              <li className="font-bold">Motion.Framer 라이브러리를 활용한 컴포넌트 애니메이션</li>
+            </ul>
           </ul>
         ),
       },
       {
-        title: "참고 자료",
+        title: "기술 키워드",
         items: (
-          <iframe
-            className="w-full h-[500px]"
-            src="https://www.youtube.com/embed/94_1gadobkA"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <ul className="w-auto flex">
+            React, Node.js, Express, MySQL, OpenAI API
+          </ul>
         ),
       },
     ],

@@ -40,7 +40,7 @@ export const PROJECT_SOLO_LIST = [
   {
     id: 101,
     title: "포트폴리오 사이트",
-    badges: ["기획", "디자인", "FE"],
+    badges: ["토이", "디자인", "FE"],
     images: "/imgs/projects/pokematch/pokematch-overview.png",
     description:
       "프론트엔드 개발자로서 이창우를 소개하는 사이트입니다",
@@ -48,7 +48,7 @@ export const PROJECT_SOLO_LIST = [
   {
     id: 102,
     title: "포켓몬 약점 계산 서비스",
-    badges: ["기획", "디자인", "FE"],
+    badges: ["토이", "디자인", "FE"],
     images: "/imgs/projects/pokematch/pokematch-overview.png",
     description:
       "POKE API를 활용하여 포켓몬의 이름 또는 타입을 입력받아 약점을 계산하여 제공하는 서비스 입니다",
@@ -56,16 +56,16 @@ export const PROJECT_SOLO_LIST = [
   {
     id: 103,
     title: "ChatGPT를 활용한 삼행시 평가 서비스",
-    badges: ["기획", "디자인", "FE", "BE"],
-    images: "/imgs/projects/pogakco/pogakco-overview.png",
+    badges: ["토이", "디자인", "FE", "BE"],
+    images: "/imgs/projects/3lineking/3lineking-overview.png",
     description:
       "GPT API를 활용하여 사용자의 삼행시를 입력받고 평가 및 랭킹을 제공하는 서비스 입니다",
   },
   {
     id: 104,
     title: "레트로 감성 투두 리스트",
-    badges: ["기획", "디자인", "FE"],
-    images: "/imgs/projects/pogakco/pogakco-overview.png",
+    badges: ["토이", "디자인", "FE"],
+    images: "/imgs/projects/todolist/todolist-overview.png",
     description:
       "React 공식 문서 스터디 중 학습한 내용의 적용을 위해 제작한 투두 리스트 사이트 입니다.",
   }
