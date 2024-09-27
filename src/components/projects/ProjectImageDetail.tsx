@@ -37,7 +37,7 @@ const ProjectImageDetail = ({ imgs, title, setIsDetailImage }: ProjectImageDetai
       <div className="text-center text-pureWhite">
         {currentIndex + 1}/{imgs?.length}
       </div>
-      <div className="w-full h-full flex flex-col items-center justify-center md:p-10 p-3">
+      <div className="w-full h-full flex flex-col items-center justify-center md:p-10">
         <button
           onClick={handlePrevClick}
           className="absolute left-10 bg-white p-2 rounded-full hover:bg-gray-300"

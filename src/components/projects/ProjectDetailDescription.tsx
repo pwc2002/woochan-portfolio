@@ -72,7 +72,7 @@ const ProjectDetailDescription = ({
     "
       >
         <div
-          className="w-full h-[420px] md:rounded-tl-lg md:rounded-tr-lg absolute z-0
+          className="w-full h-[320px] md:h-[420px] md:rounded-tl-lg md:rounded-tr-lg absolute z-0
         "
           style={{ backgroundColor: detailData.primaryColor }}
         />
