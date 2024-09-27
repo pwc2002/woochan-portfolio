@@ -73,7 +73,7 @@ const ProjectHeader = ({
       </div>
       {/* 데스크탑 */}
       <div
-        className="w-screen h-14 left-0 bottom-0 fixed z-50 md:hidden border-solid border-lightgrey border bg-pureWhite
+        className="w-screen h-14 left-0 bottom-0 fixed z-20 md:hidden border-solid border-lightgrey border bg-pureWhite
         flex justify-center items-center"
       >
         <ul className="flex gap-5">
@@ -97,7 +97,7 @@ const ProjectHeader = ({
           ))}
         </ul>
         <div
-          className="w-10 h-10 rounded-full bg-secondary flex justify-center items-center fixed right-2 top-2"
+          className="w-10 h-10 rounded-full bg-secondary flex justify-center items-center fixed right-2 top-2 z-20"
           onClick={onCloseModal}
         >
           <span className="text-xl text-pureWhite">

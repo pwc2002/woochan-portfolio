@@ -10,7 +10,7 @@ export interface IdetailData {
     organize: string;
     imgs : string[];
     description: {
-      topPart: ReactNode;
+      topPart?: ReactNode;
       bottomPart: ReactNode;
     };
     lists: {

@@ -27,10 +27,12 @@ const ListSection = ({ title, items, color }: ListTitleProps) => {
 
 interface ProjectDetailDescriptionProps {
   detailData: IdetailData | undefined;
+  setIsDetailImage: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const ProjectDetailDescription = ({
   detailData,
+  setIsDetailImage
 }: ProjectDetailDescriptionProps) => {
   const settings = {
     infinite: true,
@@ -115,7 +117,9 @@ const ProjectDetailDescription = ({
                 h-[250px]
                 px-2"
                 >
-                  <img src={url} className="object-cover w-full h-full rounded-lg border border-solid border-lightgrey" />
+                  <img src={url} 
+                  onClick={()=>setIsDetailImage(true)}
+                  className="object-cover w-full h-full rounded-lg border border-solid border-lightgrey cursor-pointer hover:scale-105 duration-300 hover:brightness-75" />
                 </div>
               ))}
             </Slider>

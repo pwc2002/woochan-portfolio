@@ -542,4 +542,61 @@ export const projectDetailData = [
       },
     ],
   },
+  {
+    id: 104,
+    primaryColor: "#000000",
+    URLS: {
+      githubURL: "https://github.com/changchangwoo/RetroTodoList",
+      blogURL: "https://velog.io/@changwoo/Todo-List-%EB%A7%8C%EB%93%A4%EA%B8%B0-retro-todo-list",
+      serviceURL: "null",
+      serviceBoolean: false,
+    },
+    title: "할 일 목록",
+    subTitle: "레트로 감성 투두 리스트",
+    workTime: "2024.04.02 - 2024.04.11",
+    organize: "1인 개발",
+    imgs: [
+      "/imgs/projects/todolist/todolist-overview.png",
+      "/imgs/projects/todolist/rtd1.gif",
+      "/imgs/projects/todolist/rtd2.gif",
+    ],
+    description: {
+      bottomPart: (
+        <p>
+          레트로 감성의 CRUD 기능을 제공하는 TodoList 서비스 입니다. 
+          <br />
+          풀스택 데브코스 스프린트1 과정을 바탕으로 학습한 Node.js 서버와의 CRUD 통신 구조에 대한 이해를 목적으로 구현하였습니다.
+        </p>
+      ),
+    },
+    lists: [
+      {
+        title: "학습 기능",
+        items: (
+          <ul className="w-auto flex flex-col gap-1">
+            <ul>
+              <li className="font-bold">리액트적 사고를 기반으로 한 컴포넌트 설계</li>
+            </ul>
+            <ul>
+              <li className="font-bold">디바운싱을 활용한 사용자 로그인, 회원가입 기능</li>
+            </ul>
+            <ul>
+              <li className="font-bold">TodoList CRUD 기능</li>
+            </ul>
+            <ul>
+              <li className="font-bold">JWT 토큰/쿠키를 활용한 클라이언트-서버 통신 구조</li>
+            </ul>
+          </ul>
+        ),
+      },
+      {
+        title: "기술 키워드",
+        items: (
+          <ul className="w-auto flex">
+            React, Node, Express, MySQL
+          </ul>
+        ),
+      },
+    ],
+  },
 ];
