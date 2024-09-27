@@ -53,7 +53,9 @@ const ProjectImageDetail = ({ imgs, title, setIsDetailImage, initialIndex = 0 }:
           <img
             src={imgs[currentIndex]}
             alt={`Project image ${currentIndex + 1}`}
-            className="max-w-full max-h-full object-contain"
+            className="object-contain
+            md:max-w-full md:max-h-full
+            max-w-full max-h-[75%]"
           />
         )}
         <div className='flex my-10 gap-10 justify-between'>
