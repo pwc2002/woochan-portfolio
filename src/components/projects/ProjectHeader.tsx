@@ -4,6 +4,7 @@ import { MdClose } from "react-icons/md";
 import { SiVelog } from "react-icons/si";
 import { SlideUpComponent } from "../animation/SlideUp";
 import { IURLS } from "@/models/DetailData.model";
+import ExitButton from "../common/ExitButton";
 
 interface ProjectHeaderProps {
   onCloseModal: () => void;
@@ -59,17 +60,7 @@ const ProjectHeader = ({
             </SlideUpComponent>
           ))}
         </ul>
-        <div
-          className="flex flex-col justify-center items-center gap-[10px] cursor-pointer"
-          onClick={onCloseModal}
-        >
-          <div className="w-16 h-16 rounded-full bg-secondary flex justify-center items-center cursor-pointer duration-300 hover:scale-105 hover:opacity-70">
-            <span className="text-3xl text-pureWhite">
-              <MdClose />
-            </span>
-          </div>
-          <h3 className="text-white font-medium text-sm">닫기</h3>
-        </div>
+        <ExitButton onClick={onCloseModal} type="desktop"/>
       </div>
       {/* 데스크탑 */}
       <div
@@ -96,14 +87,7 @@ const ProjectHeader = ({
             </SlideUpComponent>
           ))}
         </ul>
-        <div
-          className="w-10 h-10 rounded-full bg-secondary flex justify-center items-center fixed right-2 top-2 z-20"
-          onClick={onCloseModal}
-        >
-          <span className="text-xl text-pureWhite">
-            <MdClose />
-          </span>
-        </div>
+        <ExitButton onClick={onCloseModal} type="mobile"/>
       </div>
       {/* 모바일 */}
     </>

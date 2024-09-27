@@ -1,48 +1,53 @@
 "use client";
 
 import React, { useState } from 'react';
+import ExitButton from '../common/ExitButton';
+import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
 
 interface ProjectImageDetailProps {
   imgs: string[] | undefined;
   title: string | undefined;
   setIsDetailImage : React.Dispatch<React.SetStateAction<boolean>>
+  initialIndex : number;
 }
 
-const ProjectImageDetail = ({ imgs, title, setIsDetailImage }: ProjectImageDetailProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const ProjectImageDetail = ({ imgs, title, setIsDetailImage, initialIndex = 0 }: ProjectImageDetailProps) => {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
   const handlePrevClick = () => {
     if (imgs && currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
+    } else if (imgs && currentIndex <= 0) {
+      setCurrentIndex(imgs.length - 1)
     }
   };
 
   const handleNextClick = () => {
     if (imgs && currentIndex < imgs.length - 1) {
       setCurrentIndex(currentIndex + 1);
+    } else if (imgs && currentIndex >= imgs.length - 1) {
+      setCurrentIndex(0)
     }
   };
 
+  const handleExitClick = () => {
+    setIsDetailImage(false)
+  }
+
   return (
     <div className="fixed top-0 left-0 w-screen h-screen bg-opacity-80 bg-black z-50 p-5">
-        <div className='relative w-full'>
+        <div className='md:block hidden fixed z-50 top-5 right-10'><ExitButton onClick={handleExitClick} type='desktop'/></div>
+        <div className='md:hidden block fixed z-50 top-5 right-10'><ExitButton onClick={handleExitClick} type='mobile'/></div>
         <h1 className="text-pureWhite text-center px-5 w-auto">{title}</h1>
-        <button
-          onClick={() => setIsDetailImage(false)}
-          className="absolute top-2  right-2 w-10 h-10 bg-white text-black flex items-center justify-center rounded-full hover:bg-gray-300 px-5"
-        >
-          X
-        </button>
-        </div>
       <div className="text-center text-pureWhite">
         {currentIndex + 1}/{imgs?.length}
       </div>
       <div className="w-full h-full flex flex-col items-center justify-center md:p-10">
         <button
           onClick={handlePrevClick}
-          className="absolute left-10 bg-white p-2 rounded-full hover:bg-gray-300"
+          className="absolute left-12 bg-grey rounded-full hover:bg-pureWhite duration-300 text-5xl lg:block hidden"
         >
-          &lt;
+          <FaChevronCircleLeft />
         </button>
         {imgs && (
           <img
@@ -51,12 +56,27 @@ const ProjectImageDetail = ({ imgs, title, setIsDetailImage }: ProjectImageDetai
             className="max-w-full max-h-full object-contain"
           />
         )}
+        <div className='flex my-10 gap-10 justify-between'>
+                <button
+          onClick={handlePrevClick}
+          className="bg-grey rounded-full hover:bg-pureWhite duration-300 text-3xl lg:hidden block"
+        >
+          <FaChevronCircleLeft />
+        </button>
         <button
           onClick={handleNextClick}
-          className="absolute right-10 bg-white p-2 rounded-full hover:bg-gray-300"
+          className="bg-grey rounded-full hover:bg-pureWhite duration-300 text-3xl lg:hidden block"
         >
-          &gt;
+                    <FaChevronCircleRight />
         </button>
+        </div>
+        <button
+          onClick={handleNextClick}
+          className="absolute right-12 bg-grey rounded-full hover:bg-pureWhite duration-300 text-5xl lg:block hidden"
+        >
+                    <FaChevronCircleRight />
+        </button>
+
       </div>
     </div>
   );
