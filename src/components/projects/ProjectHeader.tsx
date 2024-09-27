@@ -1,6 +1,5 @@
 import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
-import { MdClose } from "react-icons/md";
 import { SiVelog } from "react-icons/si";
 import { SlideUpComponent } from "../animation/SlideUp";
 import { IURLS } from "@/models/DetailData.model";
@@ -45,7 +44,13 @@ const ProjectHeader = ({
                 key={item.text}
                 className="flex flex-col justify-center items-center gap-[10px] cursor-pointer duration-300 hover:scale-105 hover:opacity-70"
               >
-                <a
+                {
+                  item.url === "null" ? <div className="w-16 h-16 rounded-full bg-white flex justify-center items-center cursor-default brightness-[0.3]">
+                   <span className="text-3xl" style={{ color: primaryColor }}>
+                    {item.icons}
+                  </span>
+                  </div> :
+                  <a
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -55,6 +60,8 @@ const ProjectHeader = ({
                     {item.icons}
                   </span>
                 </a>
+
+}
                 <h3 className="text-white font-medium text-sm">{item.text}</h3>
               </li>
             </SlideUpComponent>
@@ -74,6 +81,15 @@ const ProjectHeader = ({
                 key={item.text}
                 className="flex flex-col justify-center items-center gap-[10px] cursor-pointer duration-300 hover:scale-105 hover:opacity-70"
               >
+                {
+                  item.url === "null" ? <div
+                  className="w-10 h-10 rounded-full flex justify-center items-center brightness-50"
+                  style={{ backgroundColor: primaryColor }}
+                  >
+                    <span className="text-xl text-pureWhite">
+                    {item.icons}
+                  </span>
+                  </div> :
                 <a
                   href={item.url}
                   target="_blank"
@@ -83,6 +99,7 @@ const ProjectHeader = ({
                 >
                   <span className="text-xl text-pureWhite">{item.icons}</span>
                 </a>
+}
               </li>
             </SlideUpComponent>
           ))}
