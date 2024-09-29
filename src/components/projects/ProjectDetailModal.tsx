@@ -30,6 +30,10 @@ const ProjectDetailModal = ({
     setIsDetailImage(true);
   };
 
+  const onCloseImage = () => {
+    setIsDetailImage(false);
+  }
+
   return (
     <section
       onClick={onClickOverlay}
@@ -40,8 +44,8 @@ const ProjectDetailModal = ({
         <ProjectImageDetail
           imgs={detailData?.imgs}
           title={detailData?.title}
-          setIsDetailImage={setIsDetailImage}
-          initialIndex={startIndex}
+          onCloseImage={onCloseImage}
+          initialIndex={startIndex} 
         />
       )}
       <ProjectHeader

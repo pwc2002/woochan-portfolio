@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
@@ -27,12 +27,30 @@ const Projects = () => {
     setIsDetailOpen(true);
     document.body.style.overflow = "hidden";
     setProjectID(id);
+    window.history.pushState({ modal: true }, '', `projectId=${id}`); // URL 변경
   };
 
   const onCloseModal = () => {
     document.body.style.overflow = "auto";
     setIsDetailOpen(false);
+    window.history.back();
   };
+
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      if (event.state && event.state.modal) {
+        onOpenModal(projectID!);
+      } else {
+        onCloseModal();
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [projectID]);
 
   return (
     <>

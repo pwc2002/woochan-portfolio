@@ -7,11 +7,11 @@ import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
 interface ProjectImageDetailProps {
   imgs: string[] | undefined;
   title: string | undefined;
-  setIsDetailImage : React.Dispatch<React.SetStateAction<boolean>>
+  onCloseImage : ()=> void;
   initialIndex : number;
 }
 
-const ProjectImageDetail = ({ imgs, title, setIsDetailImage, initialIndex = 0 }: ProjectImageDetailProps) => {
+const ProjectImageDetail = ({ imgs, title, onCloseImage, initialIndex = 0 }: ProjectImageDetailProps) => {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
 
   const handlePrevClick = () => {
@@ -30,14 +30,10 @@ const ProjectImageDetail = ({ imgs, title, setIsDetailImage, initialIndex = 0 }:
     }
   };
 
-  const handleExitClick = () => {
-    setIsDetailImage(false)
-  }
-
   return (
     <div className="fixed top-0 left-0 w-screen h-screen bg-opacity-80 bg-black z-50 p-5">
-        <div className='md:block hidden fixed z-50 top-5 right-10'><ExitButton onClick={handleExitClick} type='desktop'/></div>
-        <div className='md:hidden block fixed z-50 top-5 right-10'><ExitButton onClick={handleExitClick} type='mobile'/></div>
+        <div className='md:block hidden fixed z-50 top-5 right-10'><ExitButton onClick={onCloseImage} type='desktop'/></div>
+        <div className='md:hidden block fixed z-50 top-5 right-10'><ExitButton onClick={onCloseImage} type='mobile'/></div>
         <h1 className="text-pureWhite text-center px-5 w-auto">{title}</h1>
       <div className="text-center text-pureWhite">
         {currentIndex + 1}/{imgs?.length}
