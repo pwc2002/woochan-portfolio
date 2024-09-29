@@ -21,6 +21,9 @@ const ProjectCard = ({ title, badges, description, images }: ProjectCardProps) =
         hover:scale-105
         duration-300
         relative
+        border
+        border-solid
+        border-lightgrey
         '>
             <div className='relative w-full h-[60%]'>
                 <Image

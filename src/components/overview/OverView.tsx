@@ -3,58 +3,84 @@
 import React from "react";
 import HighlightText from "../common/HighlightText";
 import LengthUp from "../animation/LengthUp";
+import { FaGithub } from "react-icons/fa";
+import { RiNotionFill } from "react-icons/ri";
+import { SiVelog } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const OverView = () => {
   return (
     <section
       className="w-screen
       h-screen
-      bg
-      "
+      flex
+      bg"
     >
       <div
         className="w-full flex justify-center items-center flex-col relative
-            lg:max-w-[1045px] lg:py-20
-    md:max-w-[760px] md:py-20
-    max-w-full py-10 px-5
+    lg:max-w-[1045px] lg:py-20 lg:px-0
+    md:max-w-[760px] md:py-20 md:px-0
+    max-w-full py-10
     h-auto m-auto
+    px-5
         "
         style={{ minHeight: "calc(100vh - 140px)" }}
       >
-        <div className="w-full">
-        <div className="w-full flex items-center justify-between">
-        <div className="flex-grow mr-5">
-        <LengthUp />
-        </div>
-        <h1 className="text-pureWhite font-bold
+        <div className="w-full flex items-center absolute top-0 md:px-0 px-5">
+          <div className="flex gap-2">
+            <div className="text-3xl rounded-ful text-pureWhite">
+              <FaGithub />
+            </div>
+            <div className="text-3xl rounded-ful text-pureWhite">
+              <RiNotionFill />
+            </div>
+            <div className="text-3xl rounded-ful text-pureWhite">
+              <SiVelog />
+            </div>
+          </div>
+          <div className="flex-grow mx-5 justify-start">
+            <LengthUp />
+          </div>
+          <h1
+            className="text-pureWhite font-bold
     lg:text-lg
     md:text-base
-    text-sm
-        "
-        >
-          2024-09-30
-        </h1>
-      </div>
-
-          <h1
-            className="
-          lg:text-[96px]
-          md:text-[64px]
-          text-[52px]
-
-          text-grey font-bold leading-6"
+    text-sm"
           >
-            FRONT-END
+            2024-09-30
           </h1>
-          <h2
-            className="
-          lg:text-[64px]
-          md:text-[52px]
-          text-[32px]
-          text-pureWhite"
-          >
-            프론트엔드 개발자 <HighlightText>이창우</HighlightText>
-          </h2>
+        </div>
+        <div className="w-full flex flex-col ">
+          <div className="overflow-hidden lg:h-[106px] md:h-[70px] h-[60px] translate-y-5">
+            <motion.h1
+              className="
+      lg:text-[96px]
+      md:text-[64px]
+      text-[52px]
+      text-grey font-bold"
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+            >
+              FRONT-END
+            </motion.h1>
+          </div>
+
+          <div className="overflow-hidden lg:h-[76px] md:h-[63px] h-[48px]">
+            <motion.h2
+              className="
+              lg:text-[64px]
+              md:text-[52px]
+              text-[32px]
+              text-pureWhite"
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+            >
+              프론트엔드 개발자 <HighlightText>이창우</HighlightText>
+            </motion.h2>
+          </div>
+
           <hr className="flex-grow border-solid border-2 border-pureWhite my-10" />
           <h3
             className="
