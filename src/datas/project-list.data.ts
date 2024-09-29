@@ -41,9 +41,9 @@ export const PROJECT_SOLO_LIST = [
     id: 101,
     title: "포트폴리오 사이트",
     badges: ["토이", "디자인", "FE"],
-    images: "/imgs/projects/pokematch/pokematch-overview.png",
+    images: "/imgs/projects/portfolio/portfolio-overview.png",
     description:
-      "프론트엔드 개발자로서 이창우를 소개하는 사이트입니다",
+      "프론트엔드 개발자 이창우를 소개하는 사이트입니다",
   },
   {
     id: 102,

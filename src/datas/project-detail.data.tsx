@@ -420,6 +420,73 @@ export const projectDetailData = [
     ],
   },
   {
+    id: 101,
+    primaryColor: "#2B2B2B",
+    URLS: {
+      githubURL: "https://github.com/changchangwoo/POKE-MATCH-TYPE",
+      blogURL: "https://velog.io/@changwoo/%ED%9A%A8%EA%B3%BC%EB%8A%94-%EA%B5%89%EC%9E%A5%ED%96%88%EB%8B%A4-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
+      serviceURL: "https://poke-match-type.vercel.app/",
+      serviceBoolean: true,
+    },
+    title: "포트폴리오 사이트",
+    subTitle: "프론트엔드 개발자 이창우",
+    workTime: "2024.06.13 - 2024.06.16",
+    organize: "1인 개발",
+    imgs: [
+      "/imgs/projects/portfolio/portfolio-overview.png",
+      "/imgs/projects/portfolio/pf1.png",
+      "/imgs/projects/portfolio/pf2.png",
+      "/imgs/projects/portfolio/pf3.png",
+    ],
+    description: {
+      bottomPart: (
+        <p>
+          현재 보고 계신 개발자 이창우 포트폴리오 사이트 입니다.
+          <br />
+          외부 API (POKE API) 활용과 리액트 쿼리를 통한 데이터 캐싱의 이해 향상을 목적으로 구현하였습니다.
+        </p>
+      ),
+    },
+    lists: [
+      {
+        title: "학습 기능",
+        items: (
+          <ul className="w-auto flex flex-col gap-2">
+            <ul>
+              <li className="font-bold">반응형 컴포넌트 구현</li>
+            </ul>
+            <ul>
+              <li className="font-bold">포켓몬 검색 기반 약점 파악</li>
+              <li className="px-3 text-lightgrey">
+                포켓몬 검색 자동완성
+              </li>
+              <li className="px-3 text-lightgrey">
+                검색 포켓몬 정보 및 약점 계산 출력
+              </li>
+            </ul>
+            <ul>
+              <li className="font-bold">타입 검색 기반 약점 파악</li>
+              <li className="px-3 text-lightgrey">
+                최대 2개의 타입을 통해 약점 계산 출력
+              </li>
+              <li className="px-3 text-lightgrey">
+                특성 기반 약점 파악
+              </li>
+            </ul>
+          </ul>
+        ),
+      },
+      {
+        title: "기술 키워드",
+        items: (
+          <ul className="w-auto flex">
+            React, TypeScript, Tanstack-Query, Poke-API
+          </ul>
+        ),
+      },
+    ],
+  },
+  {
     id: 102,
     primaryColor: "#EA9292",
     URLS: {
