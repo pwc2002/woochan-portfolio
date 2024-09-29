@@ -50,10 +50,10 @@ const ProjectImageDetail = ({ imgs, title, onCloseImage, initialIndex = 0 }: Pro
               <Image
       src={imgs[currentIndex]}
       alt={`Project image ${currentIndex + 1}`}
-      className="object-contain
+      className="object-fill
       md:max-w-full md:max-h-full
       max-w-full max-h-[75%]"
-      width={500}
+      width={1000}
       height={300}
     />
         )}

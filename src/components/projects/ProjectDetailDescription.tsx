@@ -71,7 +71,7 @@ const ProjectDetailDescription = ({
         "
           style={{ backgroundColor: detailData.primaryColor }}
         />
-        <div className="relative z-10 p-10">
+        <div className="relative z-10 md:p-10 p-8">
           <h1
             className="font-extrabold text-pureWhite
         md:text-5xl

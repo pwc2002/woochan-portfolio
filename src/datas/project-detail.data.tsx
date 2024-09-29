@@ -25,7 +25,7 @@ export const projectDetailData = [
     description: {
       topPart: (
         <p>
-            <span className="font-bold">
+          <span className="font-bold">
             ✨최애의 이야기가 있는 곳! 스포트라이트
           </span>
           <br />
@@ -89,6 +89,22 @@ export const projectDetailData = [
                 셀렉션 상태 설정 (비공개 설정, 삭제, 수정)
               </li>
             </ul>
+          </ul>
+        ),
+      },
+      {
+        title: "결과",
+        items: (
+          <ul className="w-auto flex flex-col">
+            <li className="px-3 text-lightgrey">
+              재사용 가능한 컴포넌트 설계로 <span className="font-bold">중복 작업 감소</span> ( 검색 자동완성 )
+            </li>
+            <li className="px-3 text-lightgrey">
+              Next.js 서버사이드 렌더링을 통한 <span className="font-bold">SEO 최적화</span>
+            </li>
+            <li className="px-3 text-lightgrey">
+              Tanstack-Query를 활용한 데이터 캐싱으로 <span className="font-bold">검색 성능 향상</span>
+            </li>
           </ul>
         ),
       },
@@ -205,6 +221,19 @@ export const projectDetailData = [
         ),
       },
       {
+        title: "결과",
+        items: (
+          <ul className="w-auto flex flex-col">
+            <li className="px-3 text-lightgrey">
+            기존 소켓 서버에서 타이머를 계산하여 제공하는 방식에서, <br/>각 <span className="font-bold">클라이언트마다 타이머 시작 값만을 받고 이를 토대로 타이머를 계산</span>하도록 로직 수정
+            </li>
+            <li className="px-3 text-lightgrey">
+            해당 개선을 통해 <span className="font-bold">서버의 역할을 클라이언트에 위임함으로 서버 부하 감소</span> 및 성능 향상
+            </li>
+          </ul>
+        ),
+      },
+      {
         title: "기술 키워드",
         items: (
           <ul className="w-auto flex flex-col gap-2">
@@ -256,9 +285,12 @@ export const projectDetailData = [
       ),
       bottomPart: (
         <p>
-          작은 친구들은 일상 속 비활성 객체들과의 상호작용을 통해 새로운 사용자 채팅 경험을 제공하고 가치 인식을 확장하기 위해 기획된 프로젝트입니다
+          작은 친구들은 일상 속 비활성 객체들과의 상호작용을 통해 새로운 사용자
+          채팅 경험을 제공하고 가치 인식을 확장하기 위해 기획된 프로젝트입니다
           <br />
-          GPT API와 YOLO 모델을 활용하여 사용자가 업로드한 이미지의 물체를 식별하고 해당하는 특성의 프롬프트를 학습한 Chat GPT 통신의 챗 봇 서비스를 제공합니다.
+          GPT API와 YOLO 모델을 활용하여 사용자가 업로드한 이미지의 물체를
+          식별하고 해당하는 특성의 프롬프트를 학습한 Chat GPT 통신의 챗 봇
+          서비스를 제공합니다.
         </p>
       ),
     },
@@ -301,7 +333,7 @@ export const projectDetailData = [
             ReactNative, Expo, Yolo, Python Flask,Oepn API,
           </ul>
         ),
-      }
+      },
     ],
   },
   {
@@ -352,9 +384,7 @@ export const projectDetailData = [
           <ul className="w-auto flex flex-col gap-2">
             <ul>
               <li className="font-bold">기획</li>
-              <li className="px-3 text-lightgrey">
-                팀장, 프로젝트 기획
-              </li>
+              <li className="px-3 text-lightgrey">팀장, 프로젝트 기획</li>
             </ul>
             <ul>
               <li className="font-bold">웹 프론트엔드 구현 (React)</li>
@@ -369,7 +399,9 @@ export const projectDetailData = [
               </li>
             </ul>
             <ul>
-              <li className="font-bold">모바일 프론트엔드 구현 (React-Native)</li>
+              <li className="font-bold">
+                모바일 프론트엔드 구현 (React-Native)
+              </li>
               <li className="px-3 text-lightgrey">
                 React-Native-Chart-Kit 라이브러리를 사용한 데이터 시각화
               </li>
@@ -382,7 +414,9 @@ export const projectDetailData = [
             </ul>
 
             <ul>
-              <li className="font-bold">눈 깜박임 감지 서버 구현 (Python Flask)</li>
+              <li className="font-bold">
+                눈 깜박임 감지 서버 구현 (Python Flask)
+              </li>
               <li className="px-3 text-lightgrey">
                 Flask Socket-IO를 활용한 눈 깜박임 감지 서버 구현
               </li>
@@ -390,7 +424,7 @@ export const projectDetailData = [
                 Keras 라이브러리를 사용한 사용자 이미지 Blink 모델 적용
               </li>
               <li className="px-3 text-lightgrey">
-                Blink 모델 식별 데이터를 기반으로 한 눈 깜박임 알고리즘 구현 
+                Blink 모델 식별 데이터를 기반으로 한 눈 깜박임 알고리즘 구현
               </li>
             </ul>
           </ul>
@@ -400,8 +434,8 @@ export const projectDetailData = [
         title: "기술 키워드",
         items: (
           <ul className="w-auto flex flex-col gap-2">
-            React, ReactNative, Expo, Flask, Keras, Socket-IO, Kakao API, Google API,
-            Recharts, React-Native-Chart-Kit, Face-Detector
+            React, ReactNative, Expo, Flask, Keras, Socket-IO, Kakao API, Google
+            API, Recharts, React-Native-Chart-Kit, Face-Detector
           </ul>
         ),
       },
@@ -424,7 +458,8 @@ export const projectDetailData = [
     primaryColor: "#EA9292",
     URLS: {
       githubURL: "https://github.com/changchangwoo/POKE-MATCH-TYPE",
-      blogURL: "https://velog.io/@changwoo/%ED%9A%A8%EA%B3%BC%EB%8A%94-%EA%B5%89%EC%9E%A5%ED%96%88%EB%8B%A4-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
+      blogURL:
+        "https://velog.io/@changwoo/%ED%9A%A8%EA%B3%BC%EB%8A%94-%EA%B5%89%EC%9E%A5%ED%96%88%EB%8B%A4-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
       serviceURL: "https://poke-match-type.vercel.app/",
       serviceBoolean: true,
     },
@@ -440,9 +475,11 @@ export const projectDetailData = [
     description: {
       bottomPart: (
         <p>
-          포켓몬의 약점 시스템에 적응하기 어려운 초보자들을 대상으로 입력된 포켓몬과 타입을 기반으로 약점을 간편하게 제공하는 웹 서비스입니다. 
+          포켓몬의 약점 시스템에 적응하기 어려운 초보자들을 대상으로 입력된
+          포켓몬과 타입을 기반으로 약점을 간편하게 제공하는 웹 서비스입니다.
           <br />
-          외부 API (POKE API) 활용과 리액트 쿼리를 통한 데이터 캐싱의 이해 향상을 목적으로 구현하였습니다.
+          외부 API (POKE API) 활용과 리액트 쿼리를 통한 데이터 캐싱의 이해
+          향상을 목적으로 구현하였습니다.
         </p>
       ),
     },
@@ -456,9 +493,7 @@ export const projectDetailData = [
             </ul>
             <ul>
               <li className="font-bold">포켓몬 검색 기반 약점 파악</li>
-              <li className="px-3 text-lightgrey">
-                포켓몬 검색 자동완성
-              </li>
+              <li className="px-3 text-lightgrey">포켓몬 검색 자동완성</li>
               <li className="px-3 text-lightgrey">
                 검색 포켓몬 정보 및 약점 계산 출력
               </li>
@@ -468,9 +503,7 @@ export const projectDetailData = [
               <li className="px-3 text-lightgrey">
                 최대 2개의 타입을 통해 약점 계산 출력
               </li>
-              <li className="px-3 text-lightgrey">
-                특성 기반 약점 파악
-              </li>
+              <li className="px-3 text-lightgrey">특성 기반 약점 파악</li>
             </ul>
           </ul>
         ),
@@ -490,7 +523,8 @@ export const projectDetailData = [
     primaryColor: "#002351",
     URLS: {
       githubURL: "https://github.com/changchangwoo/3-line-king",
-      blogURL: "https://velog.io/@changwoo/%EB%8B%B9%EC%8B%A0%EC%9D%98-%EC%88%9C%EB%B0%9C%EB%A0%A5%EC%9D%84-%ED%8F%89%EA%B0%80%ED%95%B4%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4-%EC%82%BC%ED%96%89%EC%8B%9C%EC%9D%98-%EC%99%95",
+      blogURL:
+        "https://velog.io/@changwoo/%EB%8B%B9%EC%8B%A0%EC%9D%98-%EC%88%9C%EB%B0%9C%EB%A0%A5%EC%9D%84-%ED%8F%89%EA%B0%80%ED%95%B4%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4-%EC%82%BC%ED%96%89%EC%8B%9C%EC%9D%98-%EC%99%95",
       serviceURL: "null",
       serviceBoolean: false,
     },
@@ -506,9 +540,11 @@ export const projectDetailData = [
     description: {
       bottomPart: (
         <p>
-          사용자로부터 삼행시를 입력받고, 이에 대한 평가와 랭킹을 제공하는 웹 서비스 입니다. 
+          사용자로부터 삼행시를 입력받고, 이에 대한 평가와 랭킹을 제공하는 웹
+          서비스 입니다.
           <br />
-          리액트 공식 문서 학습과정을 통해 이해한 합성 컴포넌트의 실습과 핵심 기능으로서의 GPT-API 활용을 목적으로 구현하였습니다.
+          리액트 공식 문서 학습과정을 통해 이해한 합성 컴포넌트의 실습과 핵심
+          기능으로서의 GPT-API 활용을 목적으로 구현하였습니다.
         </p>
       ),
     },
@@ -518,16 +554,24 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col gap-2">
             <ul>
-              <li className="font-bold">OpenAI API를 활용한 ChatGPT 삼행시 평가 기능 구현</li>
+              <li className="font-bold">
+                OpenAI API를 활용한 ChatGPT 삼행시 평가 기능 구현
+              </li>
             </ul>
             <ul>
-              <li className="font-bold">Node.js Exress 서버, MYSQL 통신을 활용한 사용자 개별 데이터 저장</li>
+              <li className="font-bold">
+                Node.js Exress 서버, MYSQL 통신을 활용한 사용자 개별 데이터 저장
+              </li>
             </ul>
             <ul>
-              <li className="font-bold">합성 컴포넌트 기법을 활용한 컴포넌트 재사용</li>
+              <li className="font-bold">
+                합성 컴포넌트 기법을 활용한 컴포넌트 재사용
+              </li>
             </ul>
             <ul>
-              <li className="font-bold">Motion.Framer 라이브러리를 활용한 컴포넌트 애니메이션</li>
+              <li className="font-bold">
+                Motion.Framer 라이브러리를 활용한 컴포넌트 애니메이션
+              </li>
             </ul>
           </ul>
         ),
@@ -547,7 +591,8 @@ export const projectDetailData = [
     primaryColor: "#000000",
     URLS: {
       githubURL: "https://github.com/changchangwoo/RetroTodoList",
-      blogURL: "https://velog.io/@changwoo/Todo-List-%EB%A7%8C%EB%93%A4%EA%B8%B0-retro-todo-list",
+      blogURL:
+        "https://velog.io/@changwoo/Todo-List-%EB%A7%8C%EB%93%A4%EA%B8%B0-retro-todo-list",
       serviceURL: "null",
       serviceBoolean: false,
     },
@@ -563,9 +608,10 @@ export const projectDetailData = [
     description: {
       bottomPart: (
         <p>
-          레트로 감성의 CRUD 기능을 제공하는 TodoList 서비스 입니다. 
+          레트로 감성의 CRUD 기능을 제공하는 TodoList 서비스 입니다.
           <br />
-          풀스택 데브코스 스프린트1 과정을 바탕으로 학습한 Node.js 서버와의 CRUD 통신 구조에 대한 이해를 목적으로 구현하였습니다.
+          풀스택 데브코스 스프린트1 과정을 바탕으로 학습한 Node.js 서버와의 CRUD
+          통신 구조에 대한 이해를 목적으로 구현하였습니다.
         </p>
       ),
     },
@@ -575,27 +621,29 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col gap-1">
             <ul>
-              <li className="font-bold">리액트적 사고를 기반으로 한 컴포넌트 설계</li>
+              <li className="font-bold">
+                리액트적 사고를 기반으로 한 컴포넌트 설계
+              </li>
             </ul>
             <ul>
-              <li className="font-bold">디바운싱을 활용한 사용자 로그인, 회원가입 기능</li>
+              <li className="font-bold">
+                디바운싱을 활용한 사용자 로그인, 회원가입 기능
+              </li>
             </ul>
             <ul>
               <li className="font-bold">TodoList CRUD 기능</li>
             </ul>
             <ul>
-              <li className="font-bold">JWT 토큰/쿠키를 활용한 클라이언트-서버 통신 구조</li>
+              <li className="font-bold">
+                JWT 토큰/쿠키를 활용한 클라이언트-서버 통신 구조
+              </li>
             </ul>
           </ul>
         ),
       },
       {
         title: "기술 키워드",
-        items: (
-          <ul className="w-auto flex">
-            React, Node, Express, MySQL
-          </ul>
-        ),
+        items: <ul className="w-auto flex">React, Node, Express, MySQL</ul>,
       },
     ],
   },

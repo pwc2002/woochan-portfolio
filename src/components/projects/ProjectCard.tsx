@@ -28,8 +28,7 @@ const ProjectCard = ({ title, badges, description, images }: ProjectCardProps) =
                     alt={title}
                     className='object-cover rounded-tl-lg rounded-tr-lg'
                     quality={100}
-                    width={500}
-                    height={300}
+                    fill={true}
                 />
             </div>
 
