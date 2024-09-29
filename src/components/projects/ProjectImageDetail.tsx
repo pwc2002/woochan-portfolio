@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import ExitButton from '../common/ExitButton';
 import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa';
+import Image from 'next/image';
 
 interface ProjectImageDetailProps {
   imgs: string[] | undefined;
@@ -46,13 +47,15 @@ const ProjectImageDetail = ({ imgs, title, onCloseImage, initialIndex = 0 }: Pro
           <FaChevronCircleLeft />
         </button>
         {imgs && (
-          <img
-            src={imgs[currentIndex]}
-            alt={`Project image ${currentIndex + 1}`}
-            className="object-contain
-            md:max-w-full md:max-h-full
-            max-w-full max-h-[75%]"
-          />
+              <Image
+      src={imgs[currentIndex]}
+      alt={`Project image ${currentIndex + 1}`}
+      className="object-contain
+      md:max-w-full md:max-h-full
+      max-w-full max-h-[75%]"
+      width={500}
+      height={300}
+    />
         )}
         <div className='flex my-10 gap-10 justify-between'>
                 <button

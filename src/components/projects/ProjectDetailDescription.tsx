@@ -4,6 +4,7 @@ import { IdetailData } from "@/models/DetailData.model";
 import React, { ReactNode } from "react";
 import Slider from "react-slick";
 import PopUp from "../animation/PopUp";
+import Image from "next/image";
 
 interface ListTitleProps {
   title: string;
@@ -27,12 +28,12 @@ const ListSection = ({ title, items, color }: ListTitleProps) => {
 
 interface ProjectDetailDescriptionProps {
   detailData: IdetailData | undefined;
-  onClickImage: (id : number)=> void;
+  onClickImage: (id: number) => void;
 }
 
 const ProjectDetailDescription = ({
   detailData,
-  onClickImage
+  onClickImage,
 }: ProjectDetailDescriptionProps) => {
   const settings = {
     infinite: true,
@@ -112,14 +113,19 @@ const ProjectDetailDescription = ({
             <Slider {...settings}>
               {detailData.imgs.map((url, index) => (
                 <div
-                key={url}
+                  key={url}
                   className="w-auto md:h-[300px]
                 h-[250px]
                 px-2"
                 >
-                  <img src={url} 
-                  onClick={()=>onClickImage(index)}
-                  className="object-cover w-full h-full rounded-lg border border-solid border-lightgrey cursor-pointer hover:scale-105 duration-300 hover:brightness-75" />
+                  <Image
+                    src={url}
+                    alt={`Image ${index + 1}`}
+                    onClick={() => onClickImage(index)}
+                    className="object-cover w-full h-full rounded-lg border border-solid border-lightgrey cursor-pointer hover:scale-105 duration-300 hover:brightness-75"
+                    width={500}
+                    height={300}
+                  />
                 </div>
               ))}
             </Slider>

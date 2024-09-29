@@ -27,13 +27,11 @@ const Projects = () => {
     setIsDetailOpen(true);
     document.body.style.overflow = "hidden";
     setProjectID(id);
-    window.history.pushState({ modal: true }, '', `projectId=${id}`); // URL 변경
   };
 
   const onCloseModal = () => {
     document.body.style.overflow = "auto";
     setIsDetailOpen(false);
-    window.history.back();
   };
 
   useEffect(() => {

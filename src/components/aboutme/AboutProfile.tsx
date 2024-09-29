@@ -3,6 +3,7 @@ import HighlightText from "../common/HighlightText";
 import { FaUser } from "react-icons/fa";
 import { MdCall, MdEmail } from "react-icons/md";
 import { SlideUpScroll } from "../animation/SlideUp";
+import Image from "next/image";
 
 const AboutProfile = () => {
   return (
@@ -12,14 +13,13 @@ const AboutProfile = () => {
       md:flex-row md:gap-28 md:min-h-64
       flex-col gap-5 h-auto mt-10">
       <SlideUpScroll>
-      <img 
-      src="/imgs/changwoo-picture.jpg"
-      className="
-      lg:w-[250px] lg:h-auto
-      md:w-[250px] md:h-auto
-      w-[200px] h-[250px]
-      
-      bg-pureWhite border-solid rounded-lg border-white"></img>
+      <Image
+            src={"/imgs/changwoo-picture.jpg"}
+            alt={"Changwoo's picture"}
+            className={`lg:w-[250px] lg:h-auto md:w-[250px] md:h-auto w-[200px] h-[250px] bg-pureWhite border-solid rounded-lg border-white`}
+            width={250}
+            height={250} 
+        />
       </SlideUpScroll>
       <div className="flex flex-col justify-between">
         <div>
