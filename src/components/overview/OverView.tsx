@@ -1,19 +1,41 @@
 "use client";
 
 import React from "react";
-import Layout from "../common/Layout";
-import { SECTION_TITLE } from "@/constants/constants";
 import HighlightText from "../common/HighlightText";
+import LengthUp from "../animation/LengthUp";
 
 const OverView = () => {
   return (
-    <Layout title={SECTION_TITLE.overview}>
+    <section
+      className="w-screen
+      h-screen
+      bg
+      "
+    >
       <div
-        className="w-full flex justify-center items-center flex-col relative"
+        className="w-full flex justify-center items-center flex-col relative
+            lg:max-w-[1045px] lg:py-20
+    md:max-w-[760px] md:py-20
+    max-w-full py-10 px-5
+    h-auto m-auto
+        "
         style={{ minHeight: "calc(100vh - 140px)" }}
       >
-        {" "}
         <div className="w-full">
+        <div className="w-full flex items-center justify-between">
+        <div className="flex-grow mr-5">
+        <LengthUp />
+        </div>
+        <h1 className="text-pureWhite font-bold
+    lg:text-lg
+    md:text-base
+    text-sm
+        "
+        >
+          2024-09-30
+        </h1>
+      </div>
+
           <h1
             className="
           lg:text-[96px]
@@ -56,7 +78,7 @@ const OverView = () => {
           ></dotlottie-player>
         </div>
       </div>
-    </Layout>
+    </section>
   );
 };
 

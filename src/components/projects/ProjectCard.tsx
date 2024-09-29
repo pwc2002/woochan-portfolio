@@ -27,8 +27,8 @@ const ProjectCard = ({ title, badges, description, images }: ProjectCardProps) =
                     src={images}
                     alt={title}
                     className='object-cover rounded-tl-lg rounded-tr-lg'
-                    layout="fill"
                     quality={100}
+                    fill={true}
                 />
             </div>
 

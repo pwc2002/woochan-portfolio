@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
@@ -33,6 +33,22 @@ const Projects = () => {
     document.body.style.overflow = "auto";
     setIsDetailOpen(false);
   };
+
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      if (event.state && event.state.modal) {
+        onOpenModal(projectID!);
+      } else {
+        onCloseModal();
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [projectID]);
 
   return (
     <>
