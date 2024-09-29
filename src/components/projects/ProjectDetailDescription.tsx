@@ -66,12 +66,6 @@ const ProjectDetailDescription = ({
 
   return (
     <PopUp>
-      <div
-        className="max-w-[1050px] bg-white h-auto m-auto rounded-lg relative
-    md:pb-0
-    pb-10
-    "
-      >
         <div
           className="w-full h-[320px] md:h-[420px] md:rounded-tl-lg md:rounded-tr-lg absolute z-0
         "
@@ -145,7 +139,6 @@ const ProjectDetailDescription = ({
             ))}
           </div>
         </div>
-      </div>
     </PopUp>
   );
 };
