@@ -6,7 +6,7 @@ export const projectDetailData = [
       githubURL: "https://github.com/Programmers-SpotLight/SpotLight",
       blogURL:
         "https://velog.io/@changwoo/%EC%8A%A4%ED%8F%AC%ED%8A%B8%EB%9D%BC%EC%9D%B4%ED%8A%B8-SPOT-LIGHT-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0",
-      serviceURL: "https://spot-light.ovh/",
+      serviceURL: "null",
       serviceBoolean: false,
     },
     title: "스포트라이트 (SPOT-LIGHT)",
