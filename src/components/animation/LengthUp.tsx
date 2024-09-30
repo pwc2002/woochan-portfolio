@@ -4,10 +4,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 interface LengthUpProps {
-  delay?: number;
-}
+  delay?: number;}
 
-const LengthUp = ({ delay = 0 }: LengthUpProps) => {
+const LengthUp = ({ delay = 0}: LengthUpProps) => {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   return (
