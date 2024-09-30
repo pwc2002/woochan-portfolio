@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
+import GoogleAnalytics from "@/lib/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "프론트엔드 개발자 이창우",
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-primary">{children}</body>
+      <body className="bg-primary">
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+					<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />) : null}
+        {children}</body>
       <Script
           src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
           type="module"
