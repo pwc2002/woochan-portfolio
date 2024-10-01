@@ -1,9 +1,18 @@
-import React from 'react'
+'use client';
+
+import { useRouter } from 'next/navigation';
+import React, { useEffect } from 'react';
 
 const ProjectDetailPage = () => {
-  return (
-    <div className='w-screen h-screen'>prdmodal</div>
-  )
-}
+  const router = useRouter();
 
-export default ProjectDetailPage
+  useEffect(() => {
+    router.push('/');
+  }, [router]);
+
+  return (
+    <div className='hidden'>프론트엔드 개발자 이창우</div>
+  );
+};
+
+export default ProjectDetailPage;
