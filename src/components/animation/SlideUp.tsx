@@ -13,7 +13,8 @@ export const SlideUpScroll = ({ delay = 0, children }: SlideUpProps) => {
     <motion.div
       initial={{ opacity: 0, y: 15 }}
       transition={{ delay: delay, duration: 0.7 }}
-      whileInView={{opacity:1, y:0}}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
     >
       {children}
     </motion.div>

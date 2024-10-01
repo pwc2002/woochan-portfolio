@@ -490,7 +490,7 @@ export const projectDetailData = [
         <p>
           FE 개발자 이창우 소개 및 포트폴리오 정리 사이트 입니다.
           <br />
-          반응형 컴포넌트 설계와 사용자 경험을 고려한 UI/UX 설계를 목적으로
+          반응형 컴포넌트 및 사용자 경험을 고려한 UI/UX 설계의 목적으로
           구현하였습니다.
         </p>
       ),
@@ -503,6 +503,7 @@ export const projectDetailData = [
             <li> FramerMotion을 활용한 애니메이션 구현</li>
             <li> TailwindCSS 환경에서의 반응형 컴포넌트 구현 </li>
             <li> 커스텀 도메인 및 Google Analytics 설정</li>
+            <li> Next.js의 병렬적 라우팅, 라우팅 인터셉트를 활용한 Route Modal 구현</li>
           </ul>
         ),
       },
