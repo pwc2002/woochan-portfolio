@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
-import ProjectDetailModal from "./ProjectDetailModal";
 import {
   PROJECT_SOLO_LIST,
   PROJECT_TAB,
