@@ -13,15 +13,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+  modal
+}: {
   children: React.ReactNode;
-}>) {
+  modal: React.ReactNode
+}) {
   return (
     <html lang="en">
       <body className="bg-primary">
       {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
 					<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />) : null}
-        {children}</body>
+        {modal}
+        {children}  
+        </body>
       <Script
           src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
           type="module"

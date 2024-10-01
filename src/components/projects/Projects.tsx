@@ -13,7 +13,6 @@ import {
 import { SlideUpScroll } from "../animation/SlideUp";
 
 const Projects = () => {
-  const [isDetailOpen, setIsDetailOpen] = useState<boolean>(false);
   const [projectType, setProjectType] = useState<string | null>(
     PROJECT_TAB[0].type
   );
@@ -24,14 +23,12 @@ const Projects = () => {
   };
 
   const onOpenModal = (id: number) => {
-    setIsDetailOpen(true);
     document.body.style.overflow = "hidden";
     setProjectID(id);
   };
 
   const onCloseModal = () => {
     document.body.style.overflow = "auto";
-    setIsDetailOpen(false);
   };
 
   useEffect(() => {
@@ -52,9 +49,6 @@ const Projects = () => {
 
   return (
     <>
-      {isDetailOpen && (
-        <ProjectDetailModal onCloseModal={onCloseModal} projectID={projectID} />
-      )}
       <Layout title={SECTION_TITLE.project}>
         <div
           className="w-full min-h-auto flex flex-col"

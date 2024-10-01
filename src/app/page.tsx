@@ -18,7 +18,6 @@ export default function Home() {
       <Experience />
       <Contact />
       <NavBar/>
-
     </main>
   );
 }

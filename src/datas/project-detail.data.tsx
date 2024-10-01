@@ -97,13 +97,17 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col">
             <li className="px-3 text-lightgrey">
-              재사용 가능한 컴포넌트 설계로 <span className="font-bold">중복 작업 감소</span> ( 검색 자동완성 )
+              재사용 가능한 컴포넌트 설계로{" "}
+              <span className="font-bold">중복 작업 감소</span> ( 검색 자동완성
+              )
             </li>
             <li className="px-3 text-lightgrey">
-              Next.js 서버사이드 렌더링을 통한 <span className="font-bold">SEO 최적화</span>
+              Next.js 서버사이드 렌더링을 통한{" "}
+              <span className="font-bold">SEO 최적화</span>
             </li>
             <li className="px-3 text-lightgrey">
-              Tanstack-Query를 활용한 데이터 캐싱으로 <span className="font-bold">검색 성능 향상</span>
+              Tanstack-Query를 활용한 데이터 캐싱으로{" "}
+              <span className="font-bold">검색 성능 향상</span>
             </li>
           </ul>
         ),
@@ -225,10 +229,18 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col">
             <li className="px-3 text-lightgrey">
-            기존 소켓 서버에서 타이머를 계산하여 제공하는 방식에서, <br/>각 <span className="font-bold">클라이언트마다 타이머 시작 값만을 받고 이를 토대로 타이머를 계산</span>하도록 로직 수정
+              기존 소켓 서버에서 타이머를 계산하여 제공하는 방식에서, <br />각{" "}
+              <span className="font-bold">
+                클라이언트마다 타이머 시작 값만을 받고 이를 토대로 타이머를 계산
+              </span>
+              하도록 로직 수정
             </li>
             <li className="px-3 text-lightgrey">
-            해당 개선을 통해 <span className="font-bold">서버의 역할을 클라이언트에 위임함으로 서버 부하 감소</span> 및 성능 향상
+              해당 개선을 통해{" "}
+              <span className="font-bold">
+                서버의 역할을 클라이언트에 위임함으로 서버 부하 감소
+              </span>{" "}
+              및 성능 향상
             </li>
           </ul>
         ),
@@ -458,7 +470,8 @@ export const projectDetailData = [
     primaryColor: "#2B2B2B",
     URLS: {
       githubURL: "https://github.com/changchangwoo/POKE-MATCH-TYPE",
-      blogURL: "https://velog.io/@changwoo/%ED%9A%A8%EA%B3%BC%EB%8A%94-%EA%B5%89%EC%9E%A5%ED%96%88%EB%8B%A4-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
+      blogURL:
+        "https://velog.io/@changwoo/%ED%9A%A8%EA%B3%BC%EB%8A%94-%EA%B5%89%EC%9E%A5%ED%96%88%EB%8B%A4-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
       serviceURL: "https://poke-match-type.vercel.app/",
       serviceBoolean: true,
     },
@@ -475,9 +488,10 @@ export const projectDetailData = [
     description: {
       bottomPart: (
         <p>
-          현재 보고 계신 개발자 이창우 포트폴리오 사이트 입니다.
+          FE 개발자 이창우 소개 및 포트폴리오 정리 사이트 입니다.
           <br />
-          외부 API (POKE API) 활용과 리액트 쿼리를 통한 데이터 캐싱의 이해 향상을 목적으로 구현하였습니다.
+          반응형 컴포넌트 설계와 사용자 경험을 고려한 UI/UX 설계를 목적으로
+          구현하였습니다.
         </p>
       ),
     },
@@ -485,28 +499,10 @@ export const projectDetailData = [
       {
         title: "학습 기능",
         items: (
-          <ul className="w-auto flex flex-col gap-2">
-            <ul>
-              <li className="font-bold">반응형 컴포넌트 구현</li>
-            </ul>
-            <ul>
-              <li className="font-bold">포켓몬 검색 기반 약점 파악</li>
-              <li className="px-3 text-lightgrey">
-                포켓몬 검색 자동완성
-              </li>
-              <li className="px-3 text-lightgrey">
-                검색 포켓몬 정보 및 약점 계산 출력
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">타입 검색 기반 약점 파악</li>
-              <li className="px-3 text-lightgrey">
-                최대 2개의 타입을 통해 약점 계산 출력
-              </li>
-              <li className="px-3 text-lightgrey">
-                특성 기반 약점 파악
-              </li>
-            </ul>
+          <ul className="w-auto flex flex-col gap-1">
+            <li> FramerMotion을 활용한 애니메이션 구현</li>
+            <li> TailwindCSS 환경에서의 반응형 컴포넌트 구현 </li>
+            <li> 커스텀 도메인 및 Google Analytics 설정</li>
           </ul>
         ),
       },
@@ -619,27 +615,13 @@ export const projectDetailData = [
       {
         title: "학습 기능",
         items: (
-          <ul className="w-auto flex flex-col gap-2">
-            <ul>
-              <li className="font-bold">
-                OpenAI API를 활용한 ChatGPT 삼행시 평가 기능 구현
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">
-                Node.js Exress 서버, MYSQL 통신을 활용한 사용자 개별 데이터 저장
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">
-                합성 컴포넌트 기법을 활용한 컴포넌트 재사용
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">
-                Motion.Framer 라이브러리를 활용한 컴포넌트 애니메이션
-              </li>
-            </ul>
+          <ul className="w-auto flex flex-col gap-1">
+            <li>OpenAI API를 활용한 ChatGPT 삼행시 평가 기능 구현</li>
+            <li>
+              Node.js Exress 서버, MYSQL 통신을 활용한 사용자 개별 데이터 저장
+            </li>
+            <li>합성 컴포넌트 기법을 활용한 컴포넌트 재사용</li>
+            <li>Motion.Framer 라이브러리를 활용한 컴포넌트 애니메이션</li>
           </ul>
         ),
       },
@@ -687,24 +669,10 @@ export const projectDetailData = [
         title: "학습 기능",
         items: (
           <ul className="w-auto flex flex-col gap-1">
-            <ul>
-              <li className="font-bold">
-                리액트적 사고를 기반으로 한 컴포넌트 설계
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">
-                디바운싱을 활용한 사용자 로그인, 회원가입 기능
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">TodoList CRUD 기능</li>
-            </ul>
-            <ul>
-              <li className="font-bold">
-                JWT 토큰/쿠키를 활용한 클라이언트-서버 통신 구조
-              </li>
-            </ul>
+            <li>리액트적 사고를 기반으로 한 컴포넌트 설계</li>
+            <li>디바운싱을 활용한 사용자 로그인, 회원가입 기능</li>
+            <li>TodoList CRUD 기능</li>
+            <li>JWT 토큰/쿠키를 활용한 클라이언트-서버 통신 구조</li>
           </ul>
         ),
       },

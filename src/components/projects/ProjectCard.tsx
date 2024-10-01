@@ -2,17 +2,22 @@ import React from 'react';
 import ProjectBadge from '../common/ProjectBadge';
 import Image from 'next/image';
 import { FaSearch } from 'react-icons/fa';
+import Link from 'next/link';
 
 interface ProjectCardProps {
     title: string;
+    id : number;
     badges: string[];
     images: string;
     description: string;
 }
 
-const ProjectCard = ({ title, badges, description, images }: ProjectCardProps) => {
+const ProjectCard = ({ title, badges, description, images, id}: ProjectCardProps) => {
     return (
-        <div className='w-full
+        <Link
+        href={`/projects/${id}`}
+        scroll={false}
+        className='w-full
         lg:h-[300px]
         md:h-[300px]
         h-[300px]
@@ -52,7 +57,7 @@ const ProjectCard = ({ title, badges, description, images }: ProjectCardProps) =
                     {description}
                 </p>
             </div>
-        </div>
+        </Link>
     );
 }
 
