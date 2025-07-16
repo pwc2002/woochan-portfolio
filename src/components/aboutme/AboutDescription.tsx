@@ -4,28 +4,28 @@ import { SlideUpScroll } from "../animation/SlideUp";
 
 const descriptionData = [
     {
-        title: "책임감 있는 개발자",
+        title: "학습하는 개발자",
         text1: (
             <>
-                <HighlightText>협업을 위한 코드</HighlightText>를 구현하기 위해 끊임없이 노력합니다.
+                인하대학교 컴퓨터공학과 재학중이며, <HighlightText>프론트엔드 개발을 꾸준히 해왔습니다</HighlightText>.
             </>
         ),
         text2: (
             <>
-                하나의 문제를 <HighlightText>다양한 시각에서 접근</HighlightText>하는 것을 좋아합니다.
+                다양한 외주 경험을 쌓으며, <HighlightText>풀스택 개발자를 향해 나아가고 있습니다</HighlightText>.
             </>
         ),
     },
     {
-        title: "학습하는 개발자",
+        title: "기술을 사랑하는 개발자",
         text1: (
             <>
-                새로운 기술을 배우는 것에 흥미가 있으며 <HighlightText>끊임없는 성장을 도모</HighlightText>합니다.
+                Next.js를 주로 사용하며, <HighlightText>React, Node.js, Vue.js, TypeScript, Tailwind CSS, Prisma</HighlightText> 등 다양한 기술을 다룹니다.
             </>
         ),
         text2: (
             <>
-                <HighlightText>프로젝트를 통한 기술 체득을 즐기며</HighlightText> 아티클과 IT 이슈에 관심이 많습니다.
+                <HighlightText>간단한 수준의 백엔드도 개발이 가능하며</HighlightText>, 새로운 기술 학습에 항상 열려있습니다.
             </>
         ),
     },

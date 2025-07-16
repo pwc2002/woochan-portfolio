@@ -25,20 +25,18 @@ const Contact = () => {
       </SlideUpScroll>
       <SlideUpScroll delay={0.2}>
       <div className="w-full h-11 rounded-lg bg-pureWhite px-3 mt-10 font-extrabold flex items-center text-primary text-xl">
-          방명록
+          연락처
         </div>
         </SlideUpScroll>
         <SlideUpScroll delay={0.25}>
       <h3 className='text-white font-light my-5
       md:text-base
       text-sm
-      '>방명록을 통해 피드백 또는 응원의 메세지를 주신다면 정말 큰 도움이 될 것 같습니다!
-        <br/> 오늘도 행복한 하루 되세요 😊
+      '>이메일: pwc2002@inha.edu<br/>
+        GitHub: https://github.com/pwc2002<br/>
+        LinkedIn: https://www.linkedin.com/in/우찬-박-842756349/<br/>
+        오늘도 행복한 하루 되세요 😊
       </h3>
-      </SlideUpScroll>
-      <SlideUpScroll delay={0.3}>
-      <div className='w-full h-[500px] rounded-lg bg-white'>
-      </div>
       </SlideUpScroll>
       </div>
     </Layout>  )

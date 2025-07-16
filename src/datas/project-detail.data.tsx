@@ -1,49 +1,41 @@
 export const projectDetailData = [
   {
     id: 1,
-    primaryColor: "#1B4BDD",
+    primaryColor: "#4CAF50",
     URLS: {
-      githubURL: "https://github.com/Programmers-SpotLight/SpotLight",
-      blogURL:
-        "https://velog.io/@changwoo/%EC%8A%A4%ED%8F%AC%ED%8A%B8%EB%9D%BC%EC%9D%B4%ED%8A%B8-SPOT-LIGHT-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0",
+      githubURL: "https://github.com/inha-swuniv-2024-netzero-hackathon/NET-st-Level",
+      blogURL: "null",
       serviceURL: "null",
       serviceBoolean: false,
     },
-    title: "스포트라이트 (SPOT-LIGHT)",
-    subTitle: "지도 중심 커뮤니티 웹 서비스",
-    workTime: "2024.07.24 - 2024.08.29",
-    organize: "5인 개발 (풀스택 5인)",
+    title: "NetstLevel",
+    subTitle: "사용자 맞춤형 1인분 레시피 앱",
+    workTime: "2024.09 - 2024.09 (1박2일)",
+    organize: "4인 개발 (프론트엔드 1명, 백엔드 2명, 디자인 1명)",
     imgs: [
-      "/imgs/projects/spotlight/spotlight-overview.png",
-      "/imgs/projects/spotlight/sp1.png",
-      "/imgs/projects/spotlight/sp2.png",
-      "/imgs/projects/spotlight/sp3.png",
-      "/imgs/projects/spotlight/sp4.png",
-      "/imgs/projects/spotlight/sp5.png",
-      "/imgs/projects/spotlight/sp7.png",
+      "/imgs/projects/netstlevel/netstlevel-overview.png",
+      "/imgs/projects/netstlevel/netstlevel-1.png",
+      "/imgs/projects/netstlevel/netstlevel-2.png",
+      "/imgs/projects/netstlevel/netstlevel-3.png",
     ],
     description: {
       topPart: (
         <p>
           <span className="font-bold">
-            ✨최애의 이야기가 있는 곳! 스포트라이트
+            🏆 2024 AWS NetZero 해커톤 장려상 수상
           </span>
           <br />
           <br />
-          영화에 나온 그 장소, 애니메이션에서 등장한 그 배경, 내 최애가 다녔던
-          그 맛집! 혹시 어딘지 궁금하진 않으셨나요?
+          NetstLevel은 개인 취향과 식재료를 고려한 맞춤형 1인분 레시피를 제공하는 웹앱입니다.
           <br />
-          스포트라이트는 셀렉션을 통해 여러분의 특별한 장소를 공유할 수 있는
-          지도 중심의 커뮤니티 웹 서비스입니다.
+          사용자가 가지고 있는 재료와 선호도를 입력하면, AI가 분석하여 최적의 1인분 레시피를 추천해주는 서비스입니다.
         </p>
       ),
       bottomPart: (
         <p>
-          사용자는 자신이 아끼는 스팟들을 하나의 셀렉션으로 묶어 다른 사람들과
-          공유 할 수 있습니다
+          환경 친화적인 식습관을 장려하고, 음식물 쓰레기를 줄이는 것을 목표로 개발되었습니다.
           <br />
-          스포트라이트와 함께 일상 속의 최애 장소를 기록하고, 공유하며, 새로운
-          경험을 해보세요!
+          개인화된 레시피 추천을 통해 사용자의 요리 경험을 향상시키고, 지속가능한 식생활을 지원합니다.
         </p>
       ),
     },
@@ -53,41 +45,16 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col gap-2">
             <ul>
-              <li className="font-bold">UI/UX 디자인</li>
-              <li className="px-3 text-lightgrey">
-                Figma 툴을 활용한 디자인 프로토타입/와이어 프레임 구현
-              </li>
+              <li className="font-bold">프론트엔드 개발</li>
+              <li className="px-3 text-lightgrey">Next.js를 활용한 웹앱 제작</li>
+              <li className="px-3 text-lightgrey">Tailwind CSS를 활용한 반응형 UI 구현</li>
+              <li className="px-3 text-lightgrey">사용자 인터페이스 및 사용자 경험 설계</li>
             </ul>
             <ul>
-              <li className="font-bold">메인 페이지 구현</li>
-              <li className="px-3 text-lightgrey">
-                북마크 개수를 기반으로 한 인기 셀렉션 섹션
-              </li>
-              <li className="px-3 text-lightgrey">
-                사용자 개별 해시태그를 기반으로 한 맞춤 셀렉션 섹션
-              </li>
-            </ul>
-
-            <ul>
-              <li className="font-bold">검색 페이지 기능 구현</li>
-              <li className="px-3 text-lightgrey">
-                카테고리, 사용자 입력 태그, 지역, 셀렉션 정렬에 따른 검색 필터링
-              </li>
-              <li className="px-3 text-lightgrey">
-                사용자 입력 태그 검색 자동완성
-              </li>
-              <li className="px-3 text-lightgrey">
-                태그 빈도수를 기반으로 한 인기 태그 추천
-              </li>
-            </ul>
-
-            <ul>
-              <li className="font-bold">마이 페이지 기능 구현</li>
-              <li className="px-3 text-lightgrey">사용자 프로필 변경</li>
-              <li className="px-3 text-lightgrey">사용자 관심태그 설정</li>
-              <li className="px-3 text-lightgrey">
-                셀렉션 상태 설정 (비공개 설정, 삭제, 수정)
-              </li>
+              <li className="font-bold">주요 기능 구현</li>
+              <li className="px-3 text-lightgrey">재료 입력 및 선호도 설정 기능</li>
+              <li className="px-3 text-lightgrey">AI 기반 레시피 추천 시스템 연동</li>
+              <li className="px-3 text-lightgrey">레시피 상세 정보 표시</li>
             </ul>
           </ul>
         ),
@@ -97,17 +64,13 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col">
             <li className="px-3 text-lightgrey">
-              재사용 가능한 컴포넌트 설계로{" "}
-              <span className="font-bold">중복 작업 감소</span> ( 검색 자동완성
-              )
+              <span className="font-bold">AWS NetZero 해커톤 장려상</span> 수상
             </li>
             <li className="px-3 text-lightgrey">
-              Next.js 서버사이드 렌더링을 통한{" "}
-              <span className="font-bold">SEO 최적화</span>
+              <span className="font-bold">1박2일의 짧은 기간</span> 동안 완성도 높은 프로토타입 개발
             </li>
             <li className="px-3 text-lightgrey">
-              Tanstack-Query를 활용한 데이터 캐싱으로{" "}
-              <span className="font-bold">검색 성능 향상</span>
+              <span className="font-bold">팀 협업</span>을 통한 효율적인 개발 진행
             </li>
           </ul>
         ),
@@ -116,68 +79,49 @@ export const projectDetailData = [
         title: "기술 키워드",
         items: (
           <ul className="w-auto flex flex-col gap-2">
-            Next, TypeScript, Tanstack-Query, Zustand, TailwindCSS, MySQL, Knex
+            Next.js, Tailwind CSS, TypeScript, React
           </ul>
-        ),
-      },
-      {
-        title: "참고 자료",
-        items: (
-          <iframe
-            className="w-full h-[500px]"
-            src="https://www.youtube.com/embed/RjOlXbpNs18"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
         ),
       },
     ],
   },
   {
     id: 2,
-    primaryColor: "#FF8081",
+    primaryColor: "#2196F3",
     URLS: {
-      githubURL: "https://github.com/Pogakco",
-      blogURL:
-        "https://velog.io/@changwoo/%EB%BD%80%EA%B0%81%EC%BD%94-Pogakco-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0",
-      serviceURL: "https://pogakco.site/",
-      serviceBoolean: true,
+      githubURL: "null",
+      blogURL: "null",
+      serviceURL: "null",
+      serviceBoolean: false,
     },
-    title: "뽀각코 (Pogakco)",
-    subTitle: "뽀모도로 공유타이머 서비스",
-    workTime: "2024.06.24 - 2024.07.19",
-    organize: "4인 개발 (본인포함 프론트엔드 2명, 백엔드 2명)",
+    title: "유학식",
+    subTitle: "유학생을 위한 학식 종합 정보 제공 앱",
+    workTime: "2024.08 - 2024.09",
+    organize: "4인 개발 (프론트엔드 1명, 백엔드 2명, 디자인 1명)",
     imgs: [
-      "/imgs/projects/pogakco/pogakco-overview.png",
-      "/imgs/projects/pogakco/pg1.png",
-      "/imgs/projects/pogakco/pg2.png",
-      "/imgs/projects/pogakco/pg3.png",
-      "/imgs/projects/pogakco/pg4.png",
-      "/imgs/projects/pogakco/pg5.png",
+      "/imgs/projects/yuhaksik/yuhaksik-overview.png",
+      "/imgs/projects/yuhaksik/yuhaksik-1.png",
+      "/imgs/projects/yuhaksik/yuhaksik-2.png",
+      "/imgs/projects/yuhaksik/yuhaksik-3.png",
     ],
     description: {
       topPart: (
         <p>
           <span className="font-bold">
-            👏🏻 함께 집중하고 싶으신가요? POGAKCO(뽀각코)를 만나보세요!
+            🍽️ 유학생을 위한 맞춤형 학식 정보 서비스
           </span>
           <br />
           <br />
-          POGAKCO는 같은 타이머(=뽀모도로)를 통해 학습 사이클을 공유하고
-          생산성을 극대화할 수 있는 협업 서비스입니다.
+          유학식은 다양한 대학의 학식 정보를 한곳에서 확인할 수 있는 종합 정보 제공 앱입니다.
           <br />
-          자신만의 학습 스타일에 맞게 집중 시간, 쉬는 시간, 큰 휴식 시간,
-          그리고 뽀모도로 사이클 횟수를 설정하여 타이머를 생성하세요!
-          <br />
+          유학생들이 새로운 환경에서 학식 정보를 쉽게 찾고, 메뉴를 미리 확인할 수 있도록 도와주는 서비스입니다.
         </p>
       ),
       bottomPart: (
         <p>
-          설정된 타이머는 다른 사용자와 실시간으로 공유됩니다!
+          각 대학별 학식 정보를 통합하여 제공하고, 메뉴 추천 및 알림 기능을 통해 유학생들의 편의를 증대시킵니다.
           <br />
-          함께하면 더 집중할 수 있고, 효율적인 학습 환경을 조성할 수 있는
-          POGAKCO로 여러분의 집중력을 높여보세요!
+          다국어 지원을 통해 다양한 국적의 유학생들이 쉽게 이용할 수 있도록 설계되었습니다.
         </p>
       ),
     },
@@ -187,39 +131,16 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col gap-2">
             <ul>
-              <li className="font-bold">기획</li>
+              <li className="font-bold">프론트엔드 개발</li>
+              <li className="px-3 text-lightgrey">Next.js를 활용한 웹앱 개발</li>
+              <li className="px-3 text-lightgrey">반응형 디자인 구현</li>
+              <li className="px-3 text-lightgrey">사용자 인터페이스 설계</li>
             </ul>
             <ul>
-              <li className="font-bold">UI/UX 디자인</li>
-              <li className="px-3 text-lightgrey">
-                Figma 툴을 활용한 디자인 프로토타입/와이어 프레임 구현
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">메인 페이지 구현</li>
-              <li className="px-3 text-lightgrey">메인 페이지 UI/UX 구현</li>
-              <li className="px-3 text-lightgrey">
-                방 생성, 참여, 삭제, 조회, API 연결
-              </li>
-            </ul>
-
-            <ul>
-              <li className="font-bold">상세 페이지 구현</li>
-              <li className="px-3 text-lightgrey">상세 페이지 UI/UX 구현</li>
-              <li className="px-3 text-lightgrey">
-                Socket-IO 연결을 통한 실시간 참여중인 유저 상태 처리
-              </li>
-              <li className="px-3 text-lightgrey">
-                타이머 동작 여부에 따른 Drawer 상태 처리
-              </li>
-            </ul>
-
-            <ul>
-              <li className="font-bold">공유 타이머 기능 구현</li>
-              <li className="px-3 text-lightgrey">
-                타이머 시작/종료 시간을 기반으로 하는 공유 타이머 계산 알고리즘
-                구현
-              </li>
+              <li className="font-bold">주요 기능 구현</li>
+              <li className="px-3 text-lightgrey">대학별 학식 정보 표시</li>
+              <li className="px-3 text-lightgrey">메뉴 검색 및 필터링</li>
+              <li className="px-3 text-lightgrey">다국어 지원 인터페이스</li>
             </ul>
           </ul>
         ),
@@ -229,18 +150,13 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col">
             <li className="px-3 text-lightgrey">
-              기존 소켓 서버에서 타이머를 계산하여 제공하는 방식에서, <br />각{" "}
-              <span className="font-bold">
-                클라이언트마다 타이머 시작 값만을 받고 이를 토대로 타이머를 계산
-              </span>
-              하도록 로직 수정
+              <span className="font-bold">완성도 높은 UI/UX</span> 설계 및 구현
             </li>
             <li className="px-3 text-lightgrey">
-              해당 개선을 통해{" "}
-              <span className="font-bold">
-                서버의 역할을 클라이언트에 위임함으로 서버 부하 감소
-              </span>{" "}
-              및 성능 향상
+              <span className="font-bold">팀 협업</span>을 통한 효율적인 개발 진행
+            </li>
+            <li className="px-3 text-lightgrey">
+              <span className="font-bold">사용자 중심</span>의 서비스 설계
             </li>
           </ul>
         ),
@@ -249,60 +165,49 @@ export const projectDetailData = [
         title: "기술 키워드",
         items: (
           <ul className="w-auto flex flex-col gap-2">
-            React, TypeScript, Socket-IO, Tanstack-Query, Zustand,
-            React-Hook-Form, Styled-Component
+            Next.js, TypeScript, React, Tailwind CSS
           </ul>
-        ),
-      },
-      {
-        title: "참고 자료",
-        items: (
-          <iframe
-            className="w-full h-[500px]"
-            src="https://www.youtube.com/embed/X9ZZZMKe5Ps"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
         ),
       },
     ],
   },
   {
     id: 3,
-    primaryColor: "#7D516C",
+    primaryColor: "#FF9800",
     URLS: {
-      githubURL: "https://github.com/changchangwoo/GPT_Project",
+      githubURL: "https://github.com/pwc2002/bbiyakk_2123",
       blogURL: "null",
       serviceURL: "null",
-      serviceBoolean: true,
+      serviceBoolean: false,
     },
-    title: "작은 친구들",
-    subTitle: "사물 인식 챗 봇 서비스",
-    workTime: "2023.10.16 - 2023.11.12",
-    organize: "1인 개발",
+    title: "캘업",
+    subTitle: "대학 공지사항 구독 서비스",
+    workTime: "2024.10 - 2024.10",
+    organize: "4인 개발 (프론트엔드 1명, 백엔드 1명, 풀스택 1명, 디자인 1명)",
     imgs: [
-      "/imgs/projects/smallfriends/smallfriends-overview.png",
-      "/imgs/projects/smallfriends/sf1.jpg",
-      "/imgs/projects/smallfriends/sf2.jpg",
-      "/imgs/projects/smallfriends/sf3.jpg",
+      "/imgs/projects/calup/calup-overview.png",
+      "/imgs/projects/calup/calup-1.png",
+      "/imgs/projects/calup/calup-2.png",
+      "/imgs/projects/calup/calup-3.png",
     ],
     description: {
       topPart: (
         <p>
           <span className="font-bold">
-            🏆 동양미래대학교 2023 주문식 소프트웨어 경연 대회 우수상
+            📅 대학 공지사항을 한곳에서 모아보는 구독 서비스
           </span>
+          <br />
+          <br />
+          캘업은 다양한 대학 내 공지사항을 한곳에서 모아 보여주고, 캘린더 형태로 구독할 수 있는 서비스입니다.
+          <br />
+          학생들이 여러 대학의 공지사항을 효율적으로 관리하고, 중요한 일정을 놓치지 않도록 도와주는 플랫폼입니다.
         </p>
       ),
       bottomPart: (
         <p>
-          작은 친구들은 일상 속 비활성 객체들과의 상호작용을 통해 새로운 사용자
-          채팅 경험을 제공하고 가치 인식을 확장하기 위해 기획된 프로젝트입니다
+          RSS 피드를 활용하여 각 대학의 공지사항을 자동으로 수집하고, 사용자가 관심 있는 공지사항을 구독할 수 있습니다.
           <br />
-          GPT API와 YOLO 모델을 활용하여 사용자가 업로드한 이미지의 물체를
-          식별하고 해당하는 특성의 프롬프트를 학습한 Chat GPT 통신의 챗 봇
-          서비스를 제공합니다.
+          캘린더 형태의 직관적인 인터페이스를 통해 일정 관리가 용이하도록 설계되었습니다.
         </p>
       ),
     },
@@ -312,29 +217,34 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col gap-2">
             <ul>
-              <li className="font-bold">기획</li>
+              <li className="font-bold">풀스택 개발</li>
+              <li className="px-3 text-lightgrey">프론트엔드 구성 및 백엔드 구성 담당</li>
+              <li className="px-3 text-lightgrey">Next.js를 활용한 풀스택 개발</li>
+              <li className="px-3 text-lightgrey">Prisma ORM을 활용한 데이터베이스 설계</li>
             </ul>
             <ul>
-              <li className="font-bold">모바일 프론트엔드 구현</li>
-              <li className="px-3 text-lightgrey">
-                React Native Expo 환경 프론트엔드 구현
-              </li>
-              <li className="px-3 text-lightgrey">
-                Stack-Navigation을 활용한 컴포넌트 구조화
-              </li>
+              <li className="font-bold">주요 기능 구현</li>
+              <li className="px-3 text-lightgrey">대학별 공지사항 수집 및 표시</li>
+              <li className="px-3 text-lightgrey">캘린더 형태의 일정 관리</li>
+              <li className="px-3 text-lightgrey">공지사항 구독 및 알림 기능</li>
+              <li className="px-3 text-lightgrey">사용자 인증 및 프로필 관리</li>
             </ul>
-            <ul>
-              <li className="font-bold">Flask 서버 구현</li>
-              <li className="px-3 text-lightgrey">
-                Yolo 모델을 활용한 촬영 이미지 식별 기능
-              </li>
-              <li className="px-3 text-lightgrey">
-                GPT API 통신을 통한 식별 이미지 특성 프로필 데이터 생성 기능
-              </li>
-              <li className="px-3 text-lightgrey">
-                Few-shot Learning Task 기반 GPT 프롬프트
-              </li>
-            </ul>
+          </ul>
+        ),
+      },
+      {
+        title: "결과",
+        items: (
+          <ul className="w-auto flex flex-col">
+            <li className="px-3 text-lightgrey">
+              <span className="font-bold">풀스택 개발 경험</span>을 통한 전반적인 시스템 이해
+            </li>
+            <li className="px-3 text-lightgrey">
+              <span className="font-bold">데이터베이스 설계</span> 및 ORM 활용 능력 향상
+            </li>
+            <li className="px-3 text-lightgrey">
+              <span className="font-bold">팀 협업</span>을 통한 효율적인 개발 진행
+            </li>
           </ul>
         ),
       },
@@ -342,7 +252,7 @@ export const projectDetailData = [
         title: "기술 키워드",
         items: (
           <ul className="w-auto flex flex-col gap-2">
-            ReactNative, Expo, Yolo, Python Flask,Oepn API,
+            Next.js, Prisma, MySQL, TypeScript, React, Tailwind CSS
           </ul>
         ),
       },
@@ -350,42 +260,41 @@ export const projectDetailData = [
   },
   {
     id: 4,
-    primaryColor: "#F19AC9",
+    primaryColor: "#9C27B0",
     URLS: {
-      githubURL: "https://github.com/changchangwoo/Eye_love_you",
+      githubURL: "https://github.com/undermap5/webpage",
       blogURL: "null",
       serviceURL: "null",
-      serviceBoolean: true,
+      serviceBoolean: false,
     },
-    title: "아이 러브 유 (Eye-Love-You)",
-    subTitle: "눈 깜박임 감지 기반 안구 케어 서비스",
-    workTime: "2024.03.22 - 2024.11.14",
-    organize: "4인 개발 (본인 포함 프론트엔드 1명, 백엔드 1명, 디자이너 2명)",
+    title: "언더맵",
+    subTitle: "교통약자를 위한 3D 길찾기 서비스",
+    workTime: "2024.08 - 2024.08",
+    organize: "5인 개발 (프론트엔드 1명, 백엔드 2명, 디자인 1명, 기타 1명)",
     imgs: [
-      "/imgs/projects/eyeloveyou/eyeloveyou-overview.png",
-      "/imgs/projects/eyeloveyou/ely1.png",
-      "/imgs/projects/eyeloveyou/ely2.png",
-      "/imgs/projects/eyeloveyou/ely3.png",
-      "/imgs/projects/eyeloveyou/ely4.jpg",
+      "/imgs/projects/undermap/undermap-overview.png",
+      "/imgs/projects/undermap/undermap-1.png",
+      "/imgs/projects/undermap/undermap-2.png",
+      "/imgs/projects/undermap/undermap-3.png",
     ],
     description: {
       topPart: (
         <p>
           <span className="font-bold">
-            🏆 동양미래대학교 2023 스마트 SW 프로젝트 (졸업작품) 경연 대회
-            우수상
+            🚇 교통약자를 위한 혁신적인 길찾기 서비스
           </span>
+          <br />
+          <br />
+          언더맵은 교통약자를 위한 지하철 역사내의 실시간 위치 기반 3D 길찾기 서비스입니다.
+          <br />
+          휠체어 사용자, 시각 장애인 등 교통약자들이 지하철역을 안전하고 편리하게 이용할 수 있도록 도와주는 서비스입니다.
         </p>
       ),
       bottomPart: (
         <p>
-          아이러브유는 현대 사회의 빈번한 미디어 기기의 사용으로 인한
-          안구건조증과 같은 눈 건강 문제를 예방하기 위해 기획된 아이케어
-          프로젝트입니다.
+          3D 지도와 실시간 위치 추적을 통해 정확한 길찾기를 제공하고, 장애물 회피 경로를 제시합니다.
           <br />
-          Blink 모델을 통해 사용자의 눈 깜박임을 식별하고 경고음을 출력하며,
-          이를 통해 수집한 데이터를 시각화 자료로 변환하여 사용자 개별 안구 습관
-          점검 기능을 제공합니다.
+          음성 안내 기능과 접근성 고려 설계를 통해 모든 사용자가 편리하게 이용할 수 있습니다.
         </p>
       ),
     },
@@ -395,291 +304,44 @@ export const projectDetailData = [
         items: (
           <ul className="w-auto flex flex-col gap-2">
             <ul>
-              <li className="font-bold">기획</li>
-              <li className="px-3 text-lightgrey">팀장, 프로젝트 기획</li>
+              <li className="font-bold">프론트엔드 개발</li>
+              <li className="px-3 text-lightgrey">Next.js를 활용한 웹앱 개발</li>
+              <li className="px-3 text-lightgrey">3D 지도 인터페이스 구현</li>
+              <li className="px-3 text-lightgrey">실시간 위치 추적 기능</li>
             </ul>
             <ul>
-              <li className="font-bold">웹 프론트엔드 구현 (React)</li>
-              <li className="px-3 text-lightgrey">
-                Rechats 라이브러리를 활용한 데이터 시각화
-              </li>
-              <li className="px-3 text-lightgrey">
-                Kakao API (Shaer, Map) 를 활용한 공유하기, 주변안과 지도 기능
-              </li>
-              <li className="px-3 text-lightgrey">
-                Socket-IO를 활용한 실시간 카메라 이미지 통신
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">
-                모바일 프론트엔드 구현 (React-Native)
-              </li>
-              <li className="px-3 text-lightgrey">
-                React-Native-Chart-Kit 라이브러리를 사용한 데이터 시각화
-              </li>
-              <li className="px-3 text-lightgrey">
-                Google Maps API를 활용한 주변안과 지도
-              </li>
-              <li className="px-3 text-lightgrey">
-                Expo-Face-Detector 라이브러리를 활용한 모바일 눈 깜박임 기능
-              </li>
-            </ul>
-
-            <ul>
-              <li className="font-bold">
-                눈 깜박임 감지 서버 구현 (Python Flask)
-              </li>
-              <li className="px-3 text-lightgrey">
-                Flask Socket-IO를 활용한 눈 깜박임 감지 서버 구현
-              </li>
-              <li className="px-3 text-lightgrey">
-                Keras 라이브러리를 사용한 사용자 이미지 Blink 모델 적용
-              </li>
-              <li className="px-3 text-lightgrey">
-                Blink 모델 식별 데이터를 기반으로 한 눈 깜박임 알고리즘 구현
-              </li>
+              <li className="font-bold">주요 기능 구현</li>
+              <li className="px-3 text-lightgrey">3D 길찾기 알고리즘 연동</li>
+              <li className="px-3 text-lightgrey">실시간 위치 기반 경로 안내</li>
+              <li className="px-3 text-lightgrey">접근성 고려 UI/UX 설계</li>
+              <li className="px-3 text-lightgrey">음성 안내 기능</li>
             </ul>
           </ul>
         ),
       },
       {
-        title: "기술 키워드",
+        title: "결과",
         items: (
-          <ul className="w-auto flex flex-col gap-2">
-            React, ReactNative, Expo, Flask, Keras, Socket-IO, Kakao API, Google
-            API, Recharts, React-Native-Chart-Kit, Face-Detector
-          </ul>
-        ),
-      },
-      {
-        title: "참고 자료",
-        items: (
-          <iframe
-            className="w-full h-[500px]"
-            src="https://www.youtube.com/embed/94_1gadobkA"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        ),
-      },
-    ],
-  },
-  {
-    id: 101,
-    primaryColor: "#2B2B2B",
-    URLS: {
-      githubURL: "https://github.com/changchangwoo/POKE-MATCH-TYPE",
-      blogURL:
-        "https://velog.io/@changwoo/%ED%9A%A8%EA%B3%BC%EB%8A%94-%EA%B5%89%EC%9E%A5%ED%96%88%EB%8B%A4-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
-      serviceURL: "https://poke-match-type.vercel.app/",
-      serviceBoolean: true,
-    },
-    title: "포트폴리오 사이트",
-    subTitle: "프론트엔드 개발자 이창우",
-    workTime: "2024.06.13 - 2024.06.16",
-    organize: "1인 개발",
-    imgs: [
-      "/imgs/projects/portfolio/portfolio-overview.png",
-      "/imgs/projects/portfolio/pf1.png",
-      "/imgs/projects/portfolio/pf2.png",
-      "/imgs/projects/portfolio/pf3.png",
-    ],
-    description: {
-      bottomPart: (
-        <p>
-          FE 개발자 이창우 소개 및 포트폴리오 정리 사이트 입니다.
-          <br />
-          반응형 컴포넌트 및 사용자 경험을 고려한 UI/UX 설계의 목적으로
-          구현하였습니다.
-        </p>
-      ),
-    },
-    lists: [
-      {
-        title: "학습 기능",
-        items: (
-          <ul className="w-auto flex flex-col gap-1">
-            <li> FramerMotion을 활용한 애니메이션 구현</li>
-            <li> TailwindCSS 환경에서의 반응형 컴포넌트 구현 </li>
-            <li> 커스텀 도메인 및 Google Analytics 설정</li>
-            <li> Next.js의 병렬적 라우팅, 라우팅 인터셉트를 활용한 Route Modal 구현</li>
-          </ul>
-        ),
-      },
-      {
-        title: "기술 키워드",
-        items: (
-          <ul className="w-auto flex">
-            React, TypeScript, Tanstack-Query, Poke-API
-          </ul>
-        ),
-      },
-    ],
-  },
-  {
-    id: 102,
-    primaryColor: "#EA9292",
-    URLS: {
-      githubURL: "https://github.com/changchangwoo/POKE-MATCH-TYPE",
-      blogURL:
-        "https://velog.io/@changwoo/%ED%9A%A8%EA%B3%BC%EB%8A%94-%EA%B5%89%EC%9E%A5%ED%96%88%EB%8B%A4-%ED%8F%AC%EC%BC%93%EB%AA%AC-%EC%95%BD%EC%A0%90-%EA%B3%84%EC%82%B0%EA%B8%B0",
-      serviceURL: "https://poke-match-type.vercel.app/",
-      serviceBoolean: true,
-    },
-    title: "포켓몬 약점 계산기",
-    subTitle: "POKE API를 활용한 토이 프로젝트",
-    workTime: "2024.06.13 - 2024.06.16",
-    organize: "1인 개발",
-    imgs: [
-      "/imgs/projects/pokematch/pokematch-overview.png",
-      "/imgs/projects/pokematch/pm1.png",
-      "/imgs/projects/pokematch/pm2.png",
-    ],
-    description: {
-      bottomPart: (
-        <p>
-          포켓몬의 약점 시스템에 적응하기 어려운 초보자들을 대상으로 입력된
-          포켓몬과 타입을 기반으로 약점을 간편하게 제공하는 웹 서비스입니다.
-          <br />
-          외부 API (POKE API) 활용과 리액트 쿼리를 통한 데이터 캐싱의 이해
-          향상을 목적으로 구현하였습니다.
-        </p>
-      ),
-    },
-    lists: [
-      {
-        title: "학습 기능",
-        items: (
-          <ul className="w-auto flex flex-col gap-2">
-            <ul>
-              <li className="font-bold">반응형 컴포넌트 구현</li>
-            </ul>
-            <ul>
-              <li className="font-bold">포켓몬 검색 기반 약점 파악</li>
-              <li className="px-3 text-lightgrey">포켓몬 검색 자동완성</li>
-              <li className="px-3 text-lightgrey">
-                검색 포켓몬 정보 및 약점 계산 출력
-              </li>
-            </ul>
-            <ul>
-              <li className="font-bold">타입 검색 기반 약점 파악</li>
-              <li className="px-3 text-lightgrey">
-                최대 2개의 타입을 통해 약점 계산 출력
-              </li>
-              <li className="px-3 text-lightgrey">특성 기반 약점 파악</li>
-            </ul>
-          </ul>
-        ),
-      },
-      {
-        title: "기술 키워드",
-        items: (
-          <ul className="w-auto flex">
-            React, TypeScript, Tanstack-Query, Poke-API
-          </ul>
-        ),
-      },
-    ],
-  },
-  {
-    id: 103,
-    primaryColor: "#002351",
-    URLS: {
-      githubURL: "https://github.com/changchangwoo/3-line-king",
-      blogURL:
-        "https://velog.io/@changwoo/%EB%8B%B9%EC%8B%A0%EC%9D%98-%EC%88%9C%EB%B0%9C%EB%A0%A5%EC%9D%84-%ED%8F%89%EA%B0%80%ED%95%B4%EB%93%9C%EB%A6%BD%EB%8B%88%EB%8B%A4-%EC%82%BC%ED%96%89%EC%8B%9C%EC%9D%98-%EC%99%95",
-      serviceURL: "null",
-      serviceBoolean: false,
-    },
-    title: "삼행시의 왕",
-    subTitle: "ChatGPT를 활용한 삼행시 평가 서비스",
-    workTime: "2024.06.13 - 2024.06.16",
-    organize: "1인 개발",
-    imgs: [
-      "/imgs/projects/3lineking/3lineking-overview.png",
-      "/imgs/projects/3lineking/3line.gif",
-      "/imgs/projects/3lineking/3line2.gif",
-    ],
-    description: {
-      bottomPart: (
-        <p>
-          사용자로부터 삼행시를 입력받고, 이에 대한 평가와 랭킹을 제공하는 웹
-          서비스 입니다.
-          <br />
-          리액트 공식 문서 학습과정을 통해 이해한 합성 컴포넌트의 실습과 핵심
-          기능으로서의 GPT-API 활용을 목적으로 구현하였습니다.
-        </p>
-      ),
-    },
-    lists: [
-      {
-        title: "학습 기능",
-        items: (
-          <ul className="w-auto flex flex-col gap-1">
-            <li>OpenAI API를 활용한 ChatGPT 삼행시 평가 기능 구현</li>
-            <li>
-              Node.js Exress 서버, MYSQL 통신을 활용한 사용자 개별 데이터 저장
+          <ul className="w-auto flex flex-col">
+            <li className="px-3 text-lightgrey">
+              <span className="font-bold">접근성 고려</span>한 서비스 설계 및 구현
             </li>
-            <li>합성 컴포넌트 기법을 활용한 컴포넌트 재사용</li>
-            <li>Motion.Framer 라이브러리를 활용한 컴포넌트 애니메이션</li>
+            <li className="px-3 text-lightgrey">
+              <span className="font-bold">3D 지도</span> 및 실시간 위치 추적 기능 구현
+            </li>
+            <li className="px-3 text-lightgrey">
+              <span className="font-bold">사회적 가치</span>를 담은 의미 있는 프로젝트 완성
+            </li>
           </ul>
         ),
       },
       {
         title: "기술 키워드",
         items: (
-          <ul className="w-auto flex">
-            React, Node.js, Express, MySQL, OpenAI API
+          <ul className="w-auto flex flex-col gap-2">
+            Next.js, TypeScript, React, 3D Mapping, Real-time Location
           </ul>
         ),
-      },
-    ],
-  },
-  {
-    id: 104,
-    primaryColor: "#000000",
-    URLS: {
-      githubURL: "https://github.com/changchangwoo/RetroTodoList",
-      blogURL:
-        "https://velog.io/@changwoo/Todo-List-%EB%A7%8C%EB%93%A4%EA%B8%B0-retro-todo-list",
-      serviceURL: "null",
-      serviceBoolean: false,
-    },
-    title: "할 일 목록",
-    subTitle: "레트로 감성 투두 리스트",
-    workTime: "2024.04.02 - 2024.04.11",
-    organize: "1인 개발",
-    imgs: [
-      "/imgs/projects/todolist/todolist-overview.png",
-      "/imgs/projects/todolist/rtd1.gif",
-      "/imgs/projects/todolist/rtd2.gif",
-    ],
-    description: {
-      bottomPart: (
-        <p>
-          레트로 감성의 CRUD 기능을 제공하는 TodoList 서비스 입니다.
-          <br />
-          풀스택 데브코스 스프린트1 과정을 바탕으로 학습한 Node.js 서버와의 CRUD
-          통신 구조에 대한 이해를 목적으로 구현하였습니다.
-        </p>
-      ),
-    },
-    lists: [
-      {
-        title: "학습 기능",
-        items: (
-          <ul className="w-auto flex flex-col gap-1">
-            <li>리액트적 사고를 기반으로 한 컴포넌트 설계</li>
-            <li>디바운싱을 활용한 사용자 로그인, 회원가입 기능</li>
-            <li>TodoList CRUD 기능</li>
-            <li>JWT 토큰/쿠키를 활용한 클라이언트-서버 통신 구조</li>
-          </ul>
-        ),
-      },
-      {
-        title: "기술 키워드",
-        items: <ul className="w-auto flex">React, Node, Express, MySQL</ul>,
       },
     ],
   },

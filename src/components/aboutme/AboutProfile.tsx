@@ -14,8 +14,8 @@ const AboutProfile = () => {
       flex-col gap-5 h-auto mt-10">
       <SlideUpScroll>
       <Image
-            src={"/imgs/changwoo-picture.jpg"}
-            alt={"Changwoo's picture"}
+            src={"/imgs/woochan-picture.jpg"}
+            alt={"Woochan's picture"}
             className={`lg:w-[250px] lg:h-auto md:w-[250px] md:h-auto w-[200px] h-[250px] bg-pureWhite border-solid rounded-lg border-white`}
             width={250}
             height={250} 
@@ -31,7 +31,7 @@ const AboutProfile = () => {
         text-2xl
           "
           >
-            정말 반갑습니다!
+            안녕하세요!
           </h1>
           </SlideUpScroll>
           <SlideUpScroll>
@@ -43,7 +43,7 @@ const AboutProfile = () => {
           
           "
           >
-            <HighlightText>프론트엔드 개발자 이창우</HighlightText>입니다
+            <HighlightText>프론트엔드 개발자 박우찬</HighlightText>입니다
           </h1>
           </SlideUpScroll>
         </div>
@@ -57,15 +57,15 @@ const AboutProfile = () => {
           <SlideUpScroll>
           <li className="flex gap-3 items-center">
             <FaUser />
-            2000.01.19
+            2002.11.21
           </li>
           <li className="flex gap-3 items-center">
             <MdCall />
-            010-8539-2067
+            010-2087-1816
           </li>
           <li className="flex gap-3 items-center">
             <MdEmail />
-            changchangwoo119@gmail.com
+            pwc2002@inha.edu
           </li>
           </SlideUpScroll>
         </ul>

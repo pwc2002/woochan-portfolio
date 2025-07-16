@@ -17,7 +17,7 @@ const Layout = ({ children, title }: LayoutProps) => {
     max-w-full py-10 px-5
     h-auto m-auto"
     >
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex items-center justify-between mb-5">
         <div className="flex-grow mr-5">
         <LengthUp />
         </div>

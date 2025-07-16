@@ -31,9 +31,15 @@ export const techStackData = [
     },
     {
       id: 6,
-      title: "Next",
+      title: "Next.js",
       description: "",
       svgURL: "/imgs/skill/NextJS-Light.svg",
+    },
+    {
+      id: 7,
+      title: "Vue.js",
+      description: "",
+      svgURL: "/imgs/skill/Vue.svg",
     },
   ];
   
@@ -49,33 +55,21 @@ export const toolStackData = [
       title: "Figma",
       description: [""],
       svgURL: "/imgs/skill/Figma.svg",
-    },  
+    },
+    {
+      id: 203,
+      title: "Prisma",
+      description: [""],
+      svgURL: "/imgs/skill/prisma.png",
+    },
   ];
   
 export const libraryData = [
     {
-      id:101,
-      title: "Redux",
-      description : [""],
-      svgURL: "/imgs/skill/Redux.svg"
-    },
-    {
       id:102,
-      title: "TaliwindCSS",
+      title: "TailwindCSS",
       description : [""],
       svgURL: "/imgs/skill/TailwindCSS-Light.svg"
-    },
-    {
-      id:103,
-      title: "StyledComponents",
-      description : [""],
-      svgURL: "/imgs/skill/StyledComponents.svg"
-    },
-    {
-      id:104,
-      title: "Emotion-Light",
-      description : [""],
-      svgURL: "/imgs/skill/Emotion-Light.svg"
     },
   ]
   

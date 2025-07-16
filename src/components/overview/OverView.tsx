@@ -4,7 +4,7 @@ import React from "react";
 import HighlightText from "../common/HighlightText";
 import LengthUp from "../animation/LengthUp";
 import { FaGithub } from "react-icons/fa";
-import { RiNotionFill } from "react-icons/ri";
+import { FaLinkedin } from "react-icons/fa";
 import { SiVelog } from "react-icons/si";
 import FlipUp from "../animation/FlipUp";
 import { SlideUpComponent } from "../animation/SlideUp";
@@ -14,17 +14,12 @@ const OverView = () => {
     {
       id: 1,
       icon: <FaGithub />,
-      link: "https://github.com/changchangwoo",
+      link: "https://github.com/pwc2002",
     },
     {
       id: 2,
-      icon: <RiNotionFill />,
-      link: "https://www.notion.so/changchangwoo/1d0ad4b155be4f1f8bbf5629b19ba5a6",
-    },
-    {
-      id: 3,
-      icon: <SiVelog />,
-      link: "https://velog.io/@changwoo/posts",
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/%EC%9A%B0%EC%B0%AC-%EB%B0%95-842756349/",
     },
   ];
   return (
@@ -59,7 +54,7 @@ const OverView = () => {
           </div>
           <SlideUpComponent delay={0.6}>
             <h1 className="text-pureWhite font-bold lg:text-lg md:text-base text-sm">
-              2024-09-30
+              2025-07-16
             </h1>
           </SlideUpComponent>
         </div>
@@ -79,7 +74,7 @@ const OverView = () => {
             className="lg:text-[64px] md:text-[52px] text-[30px] text-pureWhite"
             height="lg:h-[76px] md:h-[63px] h-[46px]"
           >
-            프론트엔드 개발자 <HighlightText>이창우</HighlightText>
+            프론트엔드 개발자 <HighlightText>박우찬</HighlightText>
           </FlipUp>
 
           <div className="my-10">
@@ -87,11 +82,11 @@ const OverView = () => {
           </div>
           <h3 className="lg:text-2xl md:text-xl text-xl text-pureWhite">
             <SlideUpComponent delay={1.4}>
-              커피 한 잔과의 <HighlightText>사색을 즐기며</HighlightText>,<br />
+              인하대학교 컴퓨터공학과 재학중이며, <HighlightText>프론트엔드 개발을 꾸준히 해왔습니다</HighlightText>,<br />
             </SlideUpComponent>
             <SlideUpComponent delay={1.6}>
-              하나의 문제를 <HighlightText>다양한 시각에서 접근</HighlightText>
-              하는 개발자입니다
+              <HighlightText>풀스택 개발자를 향해 공부하고 있는</HighlightText>
+              개발자입니다
             </SlideUpComponent>
           </h3>
         </div>
