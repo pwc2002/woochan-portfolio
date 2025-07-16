@@ -5,7 +5,6 @@ import HighlightText from "../common/HighlightText";
 import LengthUp from "../animation/LengthUp";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { SiVelog } from "react-icons/si";
 import FlipUp from "../animation/FlipUp";
 import { SlideUpComponent } from "../animation/SlideUp";
 

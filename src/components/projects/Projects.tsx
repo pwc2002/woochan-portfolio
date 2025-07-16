@@ -5,7 +5,6 @@ import Layout from "../common/Layout";
 import { SECTION_TITLE } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
 import {
-  PROJECT_TAB,
   PROJECT_TEAM_LIST,
 } from "@/datas/project-list.data";
 import { SlideUpScroll } from "../animation/SlideUp";

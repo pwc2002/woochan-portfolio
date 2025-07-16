@@ -42,7 +42,7 @@ export const useHandleWheel = (isModalOpen : boolean) => {
         isScrolling.current = false;
       }, 1000);
     }
-  }, []);
+  }, [isModalOpen]);
 
   const handleTouchMove = useCallback((event: TouchEvent) => {
     if (isScrolling.current) {
