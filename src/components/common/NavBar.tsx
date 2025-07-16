@@ -106,7 +106,7 @@ const NavBar = () => {
                 ${mobileNavList ? "bg-primary" : "bg-secondary text-white"}`}
               >
                 <div className="flex justify-between items-center h-full relative">
-                <h1 className="mx-3 font-bold text-white"> Changwoo&apos;s PF</h1>
+                <h1 className="mx-3 font-bold text-white"> Woochan&apos;s PF</h1>
                 <div
                     className="mx-3 text-2xl hover:opacity-80 text-white cursor-pointer"
                     onClick={mobileNavListClick}
