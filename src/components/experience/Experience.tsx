@@ -7,6 +7,40 @@ const experienceData = [
   {
     title: (
       <>
+        지티윈스 · 인턴
+      </>
+    ),
+    date: "( 2026.01 ~ 현재)",
+    description: [
+      "알고리즘 기반 자동 매매 서비스 개발"
+    ],
+  },
+  {
+    title: (
+      <>
+        인하대병원 영상의학과 · 외주
+      </>
+    ),
+    date: "( 2025.09 - 2025.10 )",
+    description: [
+      "영상의학과 내부 자료 OCR 처리 및 DB화 프로그램 제작",
+      "원격 화상진료 시스템 기반 구축"
+    ],
+  },
+  {
+    title: (
+      <>
+        Auracorp · 외주
+      </>
+    ),
+    date: "( 2025.04 - 2025.05 )",
+    description: [
+      "중고등학생 직업 탐색을 위한 웹앱 제작",
+    ],
+  },
+  {
+    title: (
+      <>
         헤엄 개발팀 · 팀원
       </>
     ),
@@ -40,7 +74,7 @@ const experienceData = [
       "주식 종목 검색 시스템의 대시보드 구현",
       "실시간 데이터 기반 웹 차트 구현",
       "Tailwind CSS로 웹 CSS 구현",
-      "Next.js API Route를 이용한 API 개발",
+      "Prisma를 이용한 API 개발",
     ],
   }
 ];
@@ -93,14 +127,15 @@ const educationData = [
     title: (
       <>
         인하대학교 <br />
-        컴퓨터공학과 재학중
+        컴퓨터공학과
       </>
     ),
     date: "( 2021.03 - 현재 )",
     description: [
-      "2002년생 24살",
-      "학부생 3학년이며, GDGoC INHA 회장을 역임하며, 다양한 커뮤니티 활동을 진행하고 있음",
-      "여러 경험을 바탕으로, 다양한 프로젝트를 진행함",
+      "2002년생 학부생 3학년",
+      "24-1 GDGoC INHA Tech 파트 운영진",
+      "24-2 GDGoC INHA Tech 파트장",
+      "2025 GDGoC INHA 회장",
     ],
   }
 ];
@@ -109,155 +144,155 @@ const Experience = () => {
   return (
     <Layout title={SECTION_TITLE.experience}>
       <div className="w-full flex flex-col"
-                    style={{ minHeight: "calc(100vh - 140px)" }}
+        style={{ minHeight: "calc(100vh - 140px)" }}
 
       >
         <SlideUpScroll>
-        <div className="w-full justify-between h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
-          <p>경력</p>
-          <p>1년</p>
-        </div>
+          <div className="w-full justify-between h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
+            <p>경력</p>
+            <p>1년~</p>
+          </div>
         </SlideUpScroll>
         <ul className="w-full flex flex-col justify-center
         ">
           {experienceData.map((experience, index) => (
-            <SlideUpScroll key={index} delay={index*0.1}>
-            <li
-              key={index}
-              className="flex border-b border-white border-solid border-opacity-20
+            <SlideUpScroll key={index} delay={index * 0.1}>
+              <li
+                key={index}
+                className="flex border-b border-white border-solid border-opacity-20
               lg:flex-row 
               md:flex-row md:h-[150px] md:my-1
               flex-col my-4 h-[250px]
               
               "
-            >
-              <div className="flex-1 flex flex-col font-extrabold text-white
+              >
+                <div className="flex-1 flex flex-col font-extrabold text-white
               lg:justify-center lg:items-center
               md:justify-center md:items-center
               justify-start items-start
               
               ">
-                <h1 className="
+                  <h1 className="
                 lg:text-center lg:text-xl
                 md:text-center md:text-xl
                 text-left text-lg text-pureWhite
                 ">{experience.title}</h1>
-                <p className="
+                  <p className="
                 lg:mt-5 lg:text-xl
                 md:mt-5 md:text-xl
                 mt-2 text-base text-grey">{experience.date}</p>
-              </div>
-              
-              <div className="flex-1 flex flex-col justify-center
+                </div>
+
+                <div className="flex-1 flex flex-col justify-center
               lg:items-start lg:text-left
               md:items-start md:text-left
               items-start text-left
               ">
-                <ul className="text-white
+                  <ul className="text-white
                 lg:text-base
                 md:text-sm
                 text-sm
                 ">
-                  {experience.description.map((desc, descIndex) => (
-                    <li key={descIndex} className="mb-2">• {desc}</li>
-                  ))}
-                </ul>
-              </div>
-            </li>
+                    {experience.description.map((desc, descIndex) => (
+                      <li key={descIndex} className="mb-2">• {desc}</li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
             </SlideUpScroll>
           ))}
         </ul>
 
         <SlideUpScroll>
-        <div className="w-full h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
-          수상 내역
-        </div>
+          <div className="w-full h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
+            수상 내역
+          </div>
         </SlideUpScroll>
         <ul className="w-full flex flex-col justify-center
         ">
           {awardData.map((award, index) => (
-            <SlideUpScroll key={index} delay={index*0.1}>
-            <li
-              key={index}
-              className="flex border-b border-white border-solid border-opacity-20
+            <SlideUpScroll key={index} delay={index * 0.1}>
+              <li
+                key={index}
+                className="flex border-b border-white border-solid border-opacity-20
               lg:flex-row 
               md:flex-row md:h-[100px] md:my-1
               flex-col my-4 h-[150px]
               
               "
-            >
-              <div className="flex-1 flex flex-col font-extrabold text-white
+              >
+                <div className="flex-1 flex flex-col font-extrabold text-white
               lg:justify-center lg:items-center
               md:justify-center md:items-center
               justify-start items-start
               
               ">
-                <h1 className="
+                  <h1 className="
                 lg:text-center lg:text-xl
                 md:text-center md:text-xl
                 text-left text-lg text-pureWhite
                 ">{award.title}</h1>
-                <p className="
+                  <p className="
                 lg:mt-5 lg:text-xl
                 md:mt-5 md:text-xl
                 mt-2 text-base text-grey">{award.date}</p>
-              </div>
-            </li>
+                </div>
+              </li>
             </SlideUpScroll>
           ))}
         </ul>
 
         <SlideUpScroll>
-        <div className="w-full h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
-          학력
-        </div>
+          <div className="w-full h-11 rounded-lg bg-pureWhite px-3 my-10 font-extrabold flex items-center text-primary text-xl">
+            학력
+          </div>
         </SlideUpScroll>
         <ul className="w-full flex flex-col justify-center
         ">
           {educationData.map((education, index) => (
-            <SlideUpScroll key={index} delay={index*0.1}>
-            <li
-              key={index}
-              className="flex border-b border-white border-solid border-opacity-20
+            <SlideUpScroll key={index} delay={index * 0.1}>
+              <li
+                key={index}
+                className="flex border-b border-white border-solid border-opacity-20
               lg:flex-row 
               md:flex-row md:h-[150px] md:my-1
               flex-col my-4 h-[250px]
               
               "
-            >
-              <div className="flex-1 flex flex-col font-extrabold text-white
+              >
+                <div className="flex-1 flex flex-col font-extrabold text-white
               lg:justify-center lg:items-center
               md:justify-center md:items-center
               justify-start items-start
               
               ">
-                <h1 className="
+                  <h1 className="
                 lg:text-center lg:text-xl
                 md:text-center md:text-xl
                 text-left text-lg text-pureWhite
                 ">{education.title}</h1>
-                <p className="
+                  <p className="
                 lg:mt-5 lg:text-xl
                 md:mt-5 md:text-xl
                 mt-2 text-base text-grey">{education.date}</p>
-              </div>
-              
-              <div className="flex-1 flex flex-col justify-center
+                </div>
+
+                <div className="flex-1 flex flex-col justify-center
               lg:items-start lg:text-left
               md:items-start md:text-left
               items-start text-left
               ">
-                <ul className="text-white
+                  <ul className="text-white
                 lg:text-base
                 md:text-sm
                 text-sm
                 ">
-                  {education.description.map((desc, descIndex) => (
-                    <li key={descIndex} className="mb-2">• {desc}</li>
-                  ))}
-                </ul>
-              </div>
-            </li>
+                    {education.description.map((desc, descIndex) => (
+                      <li key={descIndex} className="mb-2">• {desc}</li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
             </SlideUpScroll>
           ))}
         </ul>

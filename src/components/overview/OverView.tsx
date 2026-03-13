@@ -53,7 +53,7 @@ const OverView = () => {
           </div>
           <SlideUpComponent delay={0.6}>
             <h1 className="text-pureWhite font-bold lg:text-lg md:text-base text-sm">
-              2025-07-16
+              2026-03-13
             </h1>
           </SlideUpComponent>
         </div>
@@ -64,7 +64,7 @@ const OverView = () => {
             className="lg:text-[96px] md:text-[64px] text-[52px] text-grey font-bold"
             height="lg:h-[106px] md:h-[70px] h-[60px]"
           >
-            FRONT-END
+            WEB DEVELOPER
           </FlipUp>
 
           <FlipUp
@@ -73,7 +73,7 @@ const OverView = () => {
             className="lg:text-[64px] md:text-[52px] text-[30px] text-pureWhite"
             height="lg:h-[76px] md:h-[63px] h-[46px]"
           >
-            프론트엔드 개발자 <HighlightText>박우찬</HighlightText>
+            웹 개발자 <HighlightText>박우찬</HighlightText>
           </FlipUp>
 
           <div className="my-10">
@@ -81,7 +81,7 @@ const OverView = () => {
           </div>
           <h3 className="lg:text-2xl md:text-xl text-xl text-pureWhite">
             <SlideUpComponent delay={1.4}>
-              인하대학교 컴퓨터공학과 재학중이며, <HighlightText>프론트엔드 개발을 꾸준히 해왔습니다</HighlightText>,<br />
+              인하대학교 컴퓨터공학과 학부생이며, <HighlightText>웹 개발을 꾸준히 해왔습니다</HighlightText>,<br />
             </SlideUpComponent>
             <SlideUpComponent delay={1.6}>
               <HighlightText>풀스택 개발자를 향해 공부하고 있는</HighlightText>

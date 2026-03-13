@@ -11,7 +11,7 @@ const ProjectDetailPage = () => {
   }, [router]);
 
   return (
-    <div className='hidden'>프론트엔드 개발자 이창우</div>
+    <div className='hidden'></div>
   );
 };
 
